@@ -108,12 +108,15 @@ nav.scrolled{border-color:var(--border)}
 @media(max-width:720px){.stats-bar{grid-template-columns:repeat(2,1fr)}}
 
 /* ---- LOGO STRIP ---- */
-.logo-strip{padding:52px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.logo-strip p{text-align:center;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:30px}
-.logo-strip-row{display:flex;align-items:center;justify-content:center;gap:clamp(28px,6vw,72px);flex-wrap:wrap}
-.logo-strip-row .badge-sm{width:46px;height:46px;opacity:.9;transition:opacity .2s,transform .2s}
-.logo-strip-row .badge-sm:hover{opacity:1;transform:translateY(-3px)}
-.logo-strip-row .badge-sm img{width:100%;height:100%;border-radius:12px;object-fit:cover}
+.logo-strip{padding:72px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2)}
+.logo-strip p{text-align:center;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:40px}
+.logo-strip-row{display:flex;align-items:stretch;justify-content:center;gap:clamp(18px,3.4vw,32px);flex-wrap:wrap;max-width:920px;margin:0 auto}
+.brand-chip{display:flex;flex-direction:column;align-items:center;gap:16px;width:150px;padding:26px 14px;background:var(--surface);border:1px solid var(--border);border-radius:18px;transition:transform .25s,border-color .25s,box-shadow .25s}
+.brand-chip:hover{transform:translateY(-5px);border-color:var(--border2);box-shadow:0 16px 36px rgba(0,0,0,.35)}
+.brand-chip .badge{width:76px;height:76px;border-radius:20px;overflow:hidden;flex:none;box-shadow:0 10px 24px rgba(0,0,0,.35)}
+.brand-chip .badge img{width:100%;height:100%;object-fit:contain;background:#0B1220}
+.brand-chip .badge svg{width:100%;height:100%;display:block}
+.brand-chip span{font-size:.86rem;font-weight:700;text-align:center;color:var(--ink)}
 
 /* ---- PRODUCT CARDS ---- */
 .products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
@@ -257,33 +260,39 @@ footer{border-top:1px solid var(--border);padding:64px 0 32px}
   <div class="wrap">
     <p>Nuestro ecosistema de productos</p>
     <div class="logo-strip-row">
-      <div class="badge-sm" title="Biosoft">
-        <svg viewBox="0 0 100 100"><defs><linearGradient id="ls1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4d3"/><stop offset="1" stop-color="#0b6f6e"/></linearGradient></defs>
-          <rect width="100" height="100" rx="22" fill="url(#ls1)"/>
+      <div class="brand-chip">
+        <div class="badge"><svg viewBox="0 0 100 100"><defs><linearGradient id="ls1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4d3"/><stop offset="1" stop-color="#0b6f6e"/></linearGradient></defs>
+          <rect width="100" height="100" fill="url(#ls1)"/>
           <path d="M40 20h20v6l6 30a4 4 0 0 1-4 5H38a4 4 0 0 1-4-5l6-30z" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
           <path d="M35 58h30" stroke="#fff" stroke-width="4"/>
           <circle cx="44" cy="70" r="3.4" fill="#fff"/><circle cx="55" cy="75" r="2.6" fill="#fff"/><circle cx="60" cy="66" r="2" fill="#fff"/>
-        </svg>
+        </svg></div>
+        <span>Biosoft</span>
       </div>
-      <div class="badge-sm" title="BioFutbol">
-        <svg viewBox="0 0 100 100"><rect width="100" height="100" rx="22" fill="#0B1626" stroke="#18A83A" stroke-width="4"/>
-          <rect x="16" y="18" width="68" height="64" rx="6" fill="url(#pitchg2)"/>
-          <line x1="16" y1="50" x2="84" y2="50" stroke="#fff" stroke-width="2" opacity=".85"/>
-          <circle cx="50" cy="50" r="11" fill="none" stroke="#fff" stroke-width="2" opacity=".85"/>
-          <circle cx="50" cy="50" r="2" fill="#fff"/>
+      <div class="brand-chip">
+        <div class="badge"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#0B1626"/>
+          <rect x="14" y="16" width="72" height="68" rx="8" fill="url(#pitchg2)"/>
+          <line x1="14" y1="50" x2="86" y2="50" stroke="#fff" stroke-width="2.2" opacity=".85"/>
+          <circle cx="50" cy="50" r="13" fill="none" stroke="#fff" stroke-width="2.2" opacity=".85"/>
+          <circle cx="50" cy="50" r="2.2" fill="#fff"/>
           <defs><linearGradient id="pitchg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2ecc55"/><stop offset="1" stop-color="#0e7d29"/></linearGradient></defs>
-        </svg>
+        </svg></div>
+        <span>BioFutbol</span>
       </div>
-      <div class="badge-sm" title="Bio Contador">
-        <svg viewBox="0 0 100 100"><defs><linearGradient id="ls3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0ABFBF"/><stop offset="1" stop-color="#0D2235"/></linearGradient></defs>
-          <rect width="100" height="100" rx="22" fill="url(#ls3)"/>
+      <div class="brand-chip">
+        <div class="badge"><svg viewBox="0 0 100 100"><defs><linearGradient id="ls3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0ABFBF"/><stop offset="1" stop-color="#0D2235"/></linearGradient></defs>
+          <rect width="100" height="100" fill="url(#ls3)"/>
           <rect x="30" y="18" width="40" height="64" rx="6" fill="none" stroke="#fff" stroke-width="4"/>
           <line x1="38" y1="34" x2="62" y2="34" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
           <line x1="38" y1="46" x2="56" y2="46" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
           <path d="M38 60l7 7 15-15" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        </svg></div>
+        <span>Bio Contador</span>
       </div>
-      <div class="badge-sm" title="Bio Finanzas"><img src="assets/biofinanzas-logo.jpg" alt="Bio Finanzas"></div>
+      <div class="brand-chip">
+        <div class="badge"><img src="assets/biofinanzas-logo.jpg" alt="Bio Finanzas"></div>
+        <span>Bio Finanzas</span>
+      </div>
     </div>
   </div>
 </div>
