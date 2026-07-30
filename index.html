@@ -88,8 +88,14 @@ nav.scrolled{border-color:var(--border)}
 /* ---- HERO ---- */
 .hero{padding:168px 0 100px;text-align:center;position:relative;overflow:hidden}
 .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
-.hero-bg svg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:max(1600px,140%);height:auto;opacity:.9}
-.hero-scrim{position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 70% 55% at 50% 38%,rgba(7,6,12,.55) 0%,rgba(7,6,12,.86) 62%,#07060c 100%)}
+.hero-bg svg{position:absolute;inset:0;width:100%;height:100%;opacity:1;filter:blur(1.2px) saturate(1.15)}
+.hero-bg .hero-bg-tall{display:none}
+@media(max-width:760px){
+  .hero-bg .hero-bg-wide{display:none}
+  .hero-bg .hero-bg-tall{display:block}
+}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 65% 50% at 50% 34%,rgba(7,6,12,.35) 0%,rgba(7,6,12,.6) 58%,rgba(7,6,12,.88) 100%)}
+@media(max-width:760px){.hero-scrim{background:linear-gradient(180deg,rgba(7,6,12,.35) 0%,rgba(7,6,12,.55) 40%,rgba(7,6,12,.82) 78%,#07060c 100%)}}
 .hero .wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
 .hero h1{font-size:clamp(2.2rem,5.4vw,3.8rem);max-width:920px;margin-bottom:22px}
 .hero p.lead{max-width:640px;color:var(--ink2);font-size:1.15rem;margin-bottom:38px}
@@ -254,7 +260,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 32px}
 <!-- ══ HERO ══ -->
 <header class="hero" id="top">
   <div class="hero-bg" aria-hidden="true">
-    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+    <svg class="hero-bg-wide" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
       <defs>
         <linearGradient id="heroFloor" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stop-color="#140f24"/>
@@ -356,6 +362,101 @@ footer{border-top:1px solid var(--border);padding:64px 0 32px}
         <circle cx="-90" cy="-90" r="5" fill="#fff"/>
         <circle cx="128" cy="0" r="5" fill="#fff"/>
         <circle cx="-128" cy="0" r="5" fill="#fff"/>
+      </g>
+    </svg>
+
+    <svg class="hero-bg-tall" viewBox="0 0 900 2200" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="heroFloorT" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#140f24"/>
+          <stop offset="1" stop-color="#07060c"/>
+        </linearGradient>
+        <radialGradient id="heroBackdropT" cx="50%" cy="18%" r="55%">
+          <stop offset="0" stop-color="#241a3d"/>
+          <stop offset="1" stop-color="#0b0a14" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="softboxGlowPT" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#c9a8ff" stop-opacity=".9"/>
+          <stop offset="1" stop-color="#c9a8ff" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="ringGlowT" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#8B5CF6" stop-opacity=".6"/>
+          <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="softboxGlowOT" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#ffcf9e" stop-opacity=".8"/>
+          <stop offset="1" stop-color="#ffcf9e" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="phoneScreenGradT" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#7C3AED"/>
+          <stop offset="1" stop-color="#F97316"/>
+        </linearGradient>
+        <radialGradient id="bokehPT" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#8B5CF6" stop-opacity=".55"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient>
+        <radialGradient id="bokehOT" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FB923C" stop-opacity=".5"/><stop offset="1" stop-color="#FB923C" stop-opacity="0"/></radialGradient>
+        <filter id="heroBlurSoftT" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="16"/></filter>
+        <filter id="heroBlurBokehT" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="30"/></filter>
+      </defs>
+
+      <rect width="900" height="2200" fill="url(#heroFloorT)"/>
+      <rect width="900" height="2200" fill="url(#heroBackdropT)"/>
+
+      <!-- ambient bokeh -->
+      <circle cx="140" cy="260" r="110" fill="url(#bokehPT)" filter="url(#heroBlurBokehT)"/>
+      <circle cx="760" cy="480" r="130" fill="url(#bokehOT)" filter="url(#heroBlurBokehT)"/>
+      <circle cx="120" cy="1300" r="110" fill="url(#bokehOT)" filter="url(#heroBlurBokehT)"/>
+      <circle cx="780" cy="1650" r="120" fill="url(#bokehPT)" filter="url(#heroBlurBokehT)"/>
+
+      <!-- top: softbox light -->
+      <g transform="translate(450,300)">
+        <line x1="0" y1="0" x2="0" y2="270" stroke="#3a3252" stroke-width="9" stroke-linecap="round"/>
+        <line x1="0" y1="270" x2="-70" y2="350" stroke="#3a3252" stroke-width="7" stroke-linecap="round"/>
+        <line x1="0" y1="270" x2="70" y2="350" stroke="#3a3252" stroke-width="7" stroke-linecap="round"/>
+        <circle cx="0" cy="-40" r="150" fill="url(#softboxGlowPT)" filter="url(#heroBlurSoftT)"/>
+        <rect x="-115" y="-155" width="230" height="230" rx="22" fill="#171326" stroke="#8B5CF6" stroke-width="5"/>
+        <path d="M-115 -95h230M-115 -40h230M-115 15h230M-58 -155v230M0 -155v230M58 -155v230" stroke="#4a4066" stroke-width="2.4" opacity=".7"/>
+      </g>
+
+      <!-- middle: ring light + phone recording a reel -->
+      <g transform="translate(450,1080)">
+        <circle cx="0" cy="0" r="200" fill="url(#ringGlowT)" filter="url(#heroBlurSoftT)"/>
+        <circle cx="0" cy="0" r="168" fill="none" stroke="#2a2140" stroke-width="26"/>
+        <circle cx="0" cy="0" r="168" fill="none" stroke="#8B5CF6" stroke-width="5" stroke-dasharray="12 16" opacity=".9"/>
+        <line x1="0" y1="168" x2="0" y2="300" stroke="#3a3252" stroke-width="9" stroke-linecap="round"/>
+        <line x1="0" y1="300" x2="-70" y2="385" stroke="#3a3252" stroke-width="7" stroke-linecap="round"/>
+        <line x1="0" y1="300" x2="70" y2="385" stroke="#3a3252" stroke-width="7" stroke-linecap="round"/>
+        <g transform="translate(-62,-105)">
+          <rect x="0" y="0" width="124" height="226" rx="26" fill="#141020" stroke="#4a4066" stroke-width="5"/>
+          <rect x="11" y="19" width="102" height="188" rx="13" fill="url(#phoneScreenGradT)" opacity=".92"/>
+          <rect x="22" y="30" width="32" height="5" rx="2.5" fill="#fff" opacity=".85"/>
+          <rect x="59" y="30" width="32" height="5" rx="2.5" fill="#fff" opacity=".4"/>
+          <circle cx="62" cy="118" r="23" fill="rgba(255,255,255,.92)"/>
+          <path d="M55 106l19 12-19 12z" fill="#7C3AED"/>
+          <rect x="46" y="166" width="46" height="10" rx="5" fill="#fff" opacity=".85"/>
+        </g>
+        <circle cx="0" cy="-168" r="6.5" fill="#fff"/>
+        <circle cx="119" cy="-119" r="6.5" fill="#fff"/>
+        <circle cx="-119" cy="-119" r="6.5" fill="#fff"/>
+        <circle cx="168" cy="0" r="6.5" fill="#fff"/>
+        <circle cx="-168" cy="0" r="6.5" fill="#fff"/>
+      </g>
+
+      <!-- bottom: camera on tripod -->
+      <g transform="translate(450,1820)">
+        <line x1="0" y1="0" x2="-90" y2="140" stroke="#3a3252" stroke-width="7" stroke-linecap="round"/>
+        <line x1="0" y1="0" x2="90" y2="140" stroke="#3a3252" stroke-width="7" stroke-linecap="round"/>
+        <line x1="0" y1="0" x2="0" y2="145" stroke="#3a3252" stroke-width="7" stroke-linecap="round"/>
+        <g transform="translate(-75,-90)">
+          <rect x="0" y="0" width="150" height="106" rx="18" fill="#1c1830" stroke="#4a4066" stroke-width="4"/>
+          <rect x="44" y="-28" width="62" height="34" rx="8" fill="#1c1830" stroke="#4a4066" stroke-width="4"/>
+          <circle cx="75" cy="54" r="38" fill="#0f0c1c" stroke="#8B5CF6" stroke-width="5"/>
+          <circle cx="75" cy="54" r="20" fill="#241c38"/>
+          <circle cx="124" cy="18" r="8" fill="#F97316"/>
+        </g>
+      </g>
+
+      <!-- right softbox glow accent -->
+      <g transform="translate(730,900)">
+        <circle cx="0" cy="0" r="130" fill="url(#softboxGlowOT)" filter="url(#heroBlurSoftT)"/>
       </g>
     </svg>
   </div>
