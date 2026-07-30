@@ -146,7 +146,7 @@ nav.scrolled{border-color:var(--border)}
 .pcard.finanzas{--accent-c:#fbbf24;--accent-grad:linear-gradient(90deg,var(--finanzas-teal),var(--finanzas))}
 
 /* ---- PRICING ---- */
-.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:stretch}
+.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:start}
 @media(max-width:1180px){.pricing-grid{grid-template-columns:repeat(2,1fr);max-width:720px;margin:0 auto}}
 @media(max-width:640px){.pricing-grid{grid-template-columns:1fr;max-width:440px}}
 .plan{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:30px 24px;display:flex;flex-direction:column;position:relative}
@@ -160,6 +160,17 @@ nav.scrolled{border-color:var(--border)}
 .plan ul{display:flex;flex-direction:column;gap:11px;margin-bottom:24px;flex:1}
 .plan li{display:flex;align-items:flex-start;gap:9px;font-size:.84rem;color:var(--ink2)}
 .plan li svg{width:17px;height:17px;flex:none;margin-top:1px;color:var(--purple-l)}
+.plan-divider{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--ink3);margin-bottom:14px;padding-top:16px;border-top:1px dashed var(--border2)}
+.plan-options{display:flex;flex-direction:column;gap:14px}
+.plan-option{border:1.5px solid var(--border);border-radius:14px;padding:16px;position:relative;background:rgba(255,255,255,.02)}
+.plan-option.recommended{border-color:var(--purple-l);background:linear-gradient(160deg,rgba(139,92,246,.16),rgba(249,115,22,.06));box-shadow:0 12px 28px rgba(109,40,217,.25)}
+.plan-option-badge{position:absolute;top:-11px;right:14px;background:var(--grad-brand);color:#fff;font-size:.6rem;font-weight:800;padding:4px 11px;border-radius:99px;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+.plan-option h4{font-size:.92rem;font-weight:800;margin-bottom:6px;padding-right:6px;line-height:1.3}
+.plan-option p{font-size:.78rem;color:var(--ink2);margin-bottom:10px;line-height:1.5}
+.plan-option-price{font-size:1.05rem;font-weight:800;margin-bottom:2px}
+.plan-option-price small{font-size:.66rem;font-weight:600;color:var(--ink3);text-transform:none;letter-spacing:0}
+.plan-option-note{font-size:.7rem;color:var(--ink3);margin-bottom:14px;line-height:1.4}
+.plan-option .btn{width:100%;justify-content:center;font-size:.8rem;padding:11px 14px}
 
 /* ---- SERVICES (automatizacion / cursos) ---- */
 .services-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
@@ -552,7 +563,24 @@ footer{border-top:1px solid var(--border);padding:64px 0 32px}
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>2 reels mensuales</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>8 imágenes de producto o servicio con apoyo de IA</li>
         </ul>
-        <a href="https://wa.me/573505457420?text=Hola%2C%20quiero%20informacion%20sobre%20el%20plan%20Emprendedor%20de%20gestion%20de%20redes%20sociales." class="btn btn-ghost btn-block" target="_blank" rel="noopener">Quiero el plan Emprendedor</a>
+        <div class="plan-divider">Elige cómo quieres empezar</div>
+        <div class="plan-options">
+          <div class="plan-option recommended">
+            <span class="plan-option-badge">Recomendado</span>
+            <h4>Con campaña paga en Meta Ads</h4>
+            <p>Anuncios reales en Instagram y Facebook para atraer clientes potenciales desde el día 1 — así lo hacen las grandes empresas.</p>
+            <div class="plan-option-price">+$49.800 <small>implementación única</small></div>
+            <div class="plan-option-note">Inversión publicitaria desde $5.000 COP/día (se paga directo a Meta)</div>
+            <a href="https://wa.me/573505457420?text=Hola%2C%20quiero%20el%20plan%20Emprendedor%20CON%20campana%20paga%20en%20Meta%20Ads%20para%20atraer%20clientes%20potenciales%20desde%20ya." class="btn btn-grad" target="_blank" rel="noopener">Me interesa con campaña paga</a>
+          </div>
+          <div class="plan-option">
+            <h4>Sin campaña paga (orgánico)</h4>
+            <p>Empieza a crecer con contenido y estrategia orgánica, sin invertir en pauta todavía.</p>
+            <div class="plan-option-price">Incluido</div>
+            <div class="plan-option-note">Puedes activar la pauta más adelante cuando quieras</div>
+            <a href="https://wa.me/573505457420?text=Hola%2C%20quiero%20el%20plan%20Emprendedor%20SIN%20campana%20paga%2C%20para%20empezar%20a%20crecer%20con%20contenido%20organico." class="btn btn-ghost" target="_blank" rel="noopener">Me interesa sin campaña paga</a>
+          </div>
+        </div>
       </div>
 
       <div class="plan reveal">
@@ -567,7 +595,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 32px}
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Calendario de contenido con estrategia mensual</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reporte mensual de resultados</li>
         </ul>
-        <a href="https://wa.me/573505457420?text=Hola%2C%20quiero%20informacion%20sobre%20el%20plan%20Basico%20de%20gestion%20de%20redes%20sociales." class="btn btn-ghost btn-block" target="_blank" rel="noopener">Quiero el plan Básico</a>
+        <a href="https://wa.me/573505457420?text=Hola%2C%20quiero%20adquirir%20el%20plan%20Basico%20de%20gestion%20de%20redes%20sociales%20y%20dejar%20de%20publicar%20sin%20estrategia." class="btn btn-ghost btn-block" target="_blank" rel="noopener">Me interesa adquirir</a>
       </div>
 
       <div class="plan featured reveal">
@@ -585,7 +613,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 32px}
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Pauta publicitaria gestionada (inversión aparte)</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reporte mensual con métricas de crecimiento</li>
         </ul>
-        <a href="https://wa.me/573505457420?text=Hola%2C%20quiero%20informacion%20sobre%20el%20plan%20Intermedio%20de%20gestion%20de%20redes%20sociales." class="btn btn-grad btn-block" target="_blank" rel="noopener">Quiero el plan Intermedio</a>
+        <a href="https://wa.me/573505457420?text=Hola%2C%20quiero%20adquirir%20el%20plan%20Intermedio%20de%20gestion%20de%20redes%20sociales%20y%20convertir%20mis%20seguidores%20en%20clientes." class="btn btn-grad btn-block" target="_blank" rel="noopener">Me interesa adquirir</a>
       </div>
 
       <div class="plan reveal">
@@ -600,7 +628,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 32px}
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Gestor de cuenta dedicado</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reportes personalizados por marca o sede</li>
         </ul>
-        <a href="https://wa.me/573505457420?text=Hola%2C%20quiero%20informacion%20sobre%20el%20plan%20Empresarial%20de%20gestion%20de%20redes%20sociales." class="btn btn-ghost btn-block" target="_blank" rel="noopener">Hablar de plan Empresarial</a>
+        <a href="https://wa.me/573505457420?text=Hola%2C%20mi%20empresa%20necesita%20el%20plan%20Empresarial%20de%20gestion%20de%20redes%20con%20estrategia%20a%20la%20medida.%20Quiero%20una%20cotizacion." class="btn btn-ghost btn-block" target="_blank" rel="noopener">Me interesa adquirir</a>
       </div>
 
     </div>
