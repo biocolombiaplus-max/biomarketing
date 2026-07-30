@@ -85,8 +85,11 @@ nav.scrolled{border-color:var(--border)}
 }
 
 /* ---- HERO ---- */
-.hero{padding:168px 0 100px;text-align:center}
-.hero .wrap{display:flex;flex-direction:column;align-items:center}
+.hero{padding:168px 0 100px;text-align:center;position:relative;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-bg svg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:max(1600px,140%);height:auto;opacity:.9}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse 70% 55% at 50% 38%,rgba(7,6,12,.55) 0%,rgba(7,6,12,.86) 62%,#07060c 100%)}
+.hero .wrap{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center}
 .hero h1{font-size:clamp(2.2rem,5.4vw,3.8rem);max-width:920px;margin-bottom:22px}
 .hero p.lead{max-width:640px;color:var(--ink2);font-size:1.15rem;margin-bottom:38px}
 .hero-cta{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-bottom:56px}
@@ -142,19 +145,20 @@ nav.scrolled{border-color:var(--border)}
 .pcard.finanzas{--accent-c:#fbbf24;--accent-grad:linear-gradient(90deg,var(--finanzas-teal),var(--finanzas))}
 
 /* ---- PRICING ---- */
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
-@media(max-width:960px){.pricing-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}}
-.plan{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:36px 30px;display:flex;flex-direction:column;position:relative}
+.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:stretch}
+@media(max-width:1180px){.pricing-grid{grid-template-columns:repeat(2,1fr);max-width:720px;margin:0 auto}}
+@media(max-width:640px){.pricing-grid{grid-template-columns:1fr;max-width:440px}}
+.plan{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:30px 24px;display:flex;flex-direction:column;position:relative}
 .plan.featured{border-color:rgba(139,92,246,.5);background:linear-gradient(180deg,rgba(109,40,217,.1),var(--surface) 30%);box-shadow:0 20px 60px rgba(109,40,217,.25)}
-.plan-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--grad-brand);color:#fff;font-size:.72rem;font-weight:700;padding:6px 18px;border-radius:99px;white-space:nowrap;box-shadow:0 8px 20px rgba(109,40,217,.4)}
-.plan h3{font-size:1.3rem;margin-bottom:8px}
-.plan .plan-sub{color:var(--ink2);font-size:.88rem;margin-bottom:22px;min-height:44px}
-.plan .price{font-size:2.1rem;font-weight:800;margin-bottom:4px}
+.plan-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--grad-brand);color:#fff;font-size:.7rem;font-weight:700;padding:6px 16px;border-radius:99px;white-space:nowrap;box-shadow:0 8px 20px rgba(109,40,217,.4)}
+.plan h3{font-size:1.2rem;margin-bottom:8px}
+.plan .plan-sub{color:var(--ink2);font-size:.85rem;margin-bottom:20px;min-height:58px}
+.plan .price{font-size:1.7rem;font-weight:800;margin-bottom:4px}
 .plan .price small{font-size:.9rem;font-weight:600;color:var(--ink3)}
 .plan .price-note{font-size:.78rem;color:var(--ink3);margin-bottom:24px}
-.plan ul{display:flex;flex-direction:column;gap:12px;margin-bottom:28px;flex:1}
-.plan li{display:flex;align-items:flex-start;gap:10px;font-size:.89rem;color:var(--ink2)}
-.plan li svg{width:18px;height:18px;flex:none;margin-top:1px;color:var(--purple-l)}
+.plan ul{display:flex;flex-direction:column;gap:11px;margin-bottom:24px;flex:1}
+.plan li{display:flex;align-items:flex-start;gap:9px;font-size:.84rem;color:var(--ink2)}
+.plan li svg{width:17px;height:17px;flex:none;margin-top:1px;color:var(--purple-l)}
 
 /* ---- SERVICES (automatizacion / cursos) ---- */
 .services-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
@@ -237,6 +241,113 @@ footer{border-top:1px solid var(--border);padding:64px 0 32px}
 
 <!-- ══ HERO ══ -->
 <header class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="heroFloor" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#140f24"/>
+          <stop offset="1" stop-color="#07060c"/>
+        </linearGradient>
+        <radialGradient id="heroBackdrop" cx="50%" cy="30%" r="75%">
+          <stop offset="0" stop-color="#241a3d"/>
+          <stop offset="1" stop-color="#0b0a14" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="softboxGlowP" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#c9a8ff" stop-opacity=".85"/>
+          <stop offset="1" stop-color="#c9a8ff" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="softboxGlowO" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#ffcf9e" stop-opacity=".8"/>
+          <stop offset="1" stop-color="#ffcf9e" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="phoneScreenGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#7C3AED"/>
+          <stop offset="1" stop-color="#F97316"/>
+        </linearGradient>
+        <radialGradient id="ringGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#8B5CF6" stop-opacity=".55"/>
+          <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="bokehP" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#8B5CF6" stop-opacity=".55"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></radialGradient>
+        <radialGradient id="bokehO" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#FB923C" stop-opacity=".5"/><stop offset="1" stop-color="#FB923C" stop-opacity="0"/></radialGradient>
+        <filter id="heroBlurSoft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="10"/></filter>
+        <filter id="heroBlurBokeh" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="22"/></filter>
+      </defs>
+
+      <rect width="1600" height="900" fill="url(#heroFloor)"/>
+      <rect width="1600" height="900" fill="url(#heroBackdrop)"/>
+
+      <!-- floating bokeh (depth of field lights) -->
+      <circle cx="180" cy="150" r="70" fill="url(#bokehP)" filter="url(#heroBlurBokeh)"/>
+      <circle cx="1440" cy="230" r="90" fill="url(#bokehO)" filter="url(#heroBlurBokeh)"/>
+      <circle cx="1300" cy="620" r="60" fill="url(#bokehP)" filter="url(#heroBlurBokeh)"/>
+      <circle cx="120" cy="640" r="80" fill="url(#bokehO)" filter="url(#heroBlurBokeh)"/>
+
+      <!-- studio floor line -->
+      <line x1="0" y1="760" x2="1600" y2="760" stroke="#241c38" stroke-width="2"/>
+
+      <!-- LEFT: camera on tripod -->
+      <g transform="translate(190,560)">
+        <line x1="0" y1="220" x2="-70" y2="330" stroke="#3a3252" stroke-width="6" stroke-linecap="round"/>
+        <line x1="0" y1="220" x2="70" y2="330" stroke="#3a3252" stroke-width="6" stroke-linecap="round"/>
+        <line x1="0" y1="220" x2="0" y2="335" stroke="#3a3252" stroke-width="6" stroke-linecap="round"/>
+        <line x1="0" y1="40" x2="0" y2="220" stroke="#4a4066" stroke-width="10" stroke-linecap="round"/>
+        <g transform="translate(-58,-40)">
+          <rect x="0" y="0" width="116" height="82" rx="14" fill="#1c1830" stroke="#4a4066" stroke-width="3"/>
+          <rect x="34" y="-22" width="48" height="26" rx="6" fill="#1c1830" stroke="#4a4066" stroke-width="3"/>
+          <circle cx="58" cy="42" r="30" fill="#0f0c1c" stroke="#8B5CF6" stroke-width="4"/>
+          <circle cx="58" cy="42" r="16" fill="#241c38"/>
+          <circle cx="96" cy="14" r="6" fill="#F97316"/>
+        </g>
+      </g>
+
+      <!-- LEFT softbox light -->
+      <g transform="translate(230,190) rotate(-8)">
+        <line x1="0" y1="0" x2="0" y2="260" stroke="#3a3252" stroke-width="8" stroke-linecap="round"/>
+        <line x1="0" y1="260" x2="-60" y2="330" stroke="#3a3252" stroke-width="6" stroke-linecap="round"/>
+        <line x1="0" y1="260" x2="60" y2="330" stroke="#3a3252" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="0" cy="-30" r="120" fill="url(#softboxGlowP)" filter="url(#heroBlurSoft)"/>
+        <rect x="-95" y="-125" width="190" height="190" rx="18" fill="#171326" stroke="#8B5CF6" stroke-width="4"/>
+        <path d="M-95 -75h190M-95 -25h190M-95 25h190M-50 -125v190M0 -125v190M50 -125v190" stroke="#4a4066" stroke-width="2" opacity=".7"/>
+      </g>
+
+      <!-- RIGHT softbox light -->
+      <g transform="translate(1360,160) rotate(10)">
+        <line x1="0" y1="0" x2="0" y2="240" stroke="#3a3252" stroke-width="8" stroke-linecap="round"/>
+        <line x1="0" y1="240" x2="-55" y2="305" stroke="#3a3252" stroke-width="6" stroke-linecap="round"/>
+        <line x1="0" y1="240" x2="55" y2="305" stroke="#3a3252" stroke-width="6" stroke-linecap="round"/>
+        <circle cx="0" cy="-25" r="105" fill="url(#softboxGlowO)" filter="url(#heroBlurSoft)"/>
+        <rect x="-82" y="-108" width="164" height="164" rx="16" fill="#171326" stroke="#FB923C" stroke-width="4"/>
+        <path d="M-82 -64h164M-82 -20h164M-82 24h164M-41 -108v164M0 -108v164M41 -108v164" stroke="#4a4066" stroke-width="2" opacity=".7"/>
+      </g>
+
+      <!-- RIGHT: ring light + phone recording a reel -->
+      <g transform="translate(1120,600)">
+        <circle cx="0" cy="0" r="150" fill="url(#ringGlow)" filter="url(#heroBlurSoft)"/>
+        <circle cx="0" cy="0" r="128" fill="none" stroke="#2a2140" stroke-width="22"/>
+        <circle cx="0" cy="0" r="128" fill="none" stroke="#8B5CF6" stroke-width="4" stroke-dasharray="10 14" opacity=".9"/>
+        <line x1="0" y1="128" x2="0" y2="230" stroke="#3a3252" stroke-width="8" stroke-linecap="round"/>
+        <line x1="0" y1="230" x2="-55" y2="300" stroke="#3a3252" stroke-width="6" stroke-linecap="round"/>
+        <line x1="0" y1="230" x2="55" y2="300" stroke="#3a3252" stroke-width="6" stroke-linecap="round"/>
+        <g transform="translate(-46,-78)">
+          <rect x="0" y="0" width="92" height="168" rx="20" fill="#141020" stroke="#4a4066" stroke-width="4"/>
+          <rect x="8" y="14" width="76" height="140" rx="10" fill="url(#phoneScreenGrad)" opacity=".92"/>
+          <rect x="16" y="22" width="24" height="4" rx="2" fill="#fff" opacity=".85"/>
+          <rect x="44" y="22" width="24" height="4" rx="2" fill="#fff" opacity=".4"/>
+          <circle cx="46" cy="88" r="17" fill="rgba(255,255,255,.92)"/>
+          <path d="M41 79l14 9-14 9z" fill="#7C3AED"/>
+          <path d="M20 128a8 8 0 1 0 0.1 0z" fill="#fff" opacity=".9"/>
+          <rect x="34" y="123" width="34" height="8" rx="4" fill="#fff" opacity=".85"/>
+        </g>
+        <circle cx="0" cy="-128" r="5" fill="#fff"/>
+        <circle cx="90" cy="-90" r="5" fill="#fff"/>
+        <circle cx="-90" cy="-90" r="5" fill="#fff"/>
+        <circle cx="128" cy="0" r="5" fill="#fff"/>
+        <circle cx="-128" cy="0" r="5" fill="#fff"/>
+      </g>
+    </svg>
+  </div>
+  <div class="hero-scrim" aria-hidden="true"></div>
   <div class="wrap">
     <span class="kicker">Grupo tecnológico colombiano · IA aplicada</span>
     <h1>Convertimos <span class="grad-text">Inteligencia Artificial</span> en resultados reales para tu negocio</h1>
@@ -428,6 +539,19 @@ footer{border-top:1px solid var(--border);padding:64px 0 32px}
       <p>Un servicio pensado exclusivamente para clínicas, consultorios, laboratorios y profesionales de la salud independientes que quieren atraer más pacientes sin perder tiempo administrando redes.</p>
     </div>
     <div class="pricing-grid">
+
+      <div class="plan reveal">
+        <h3>Emprendedor</h3>
+        <p class="plan-sub">Para negocios de salud que están arrancando y quieren presencia profesional en redes con un costo bajo.</p>
+        <div class="price">$350.000 <small>COP/mes</small></div>
+        <div class="price-note">Sin permanencia mínima</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Análisis y mejoramiento de perfil de Instagram y página de Facebook</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>2 reels mensuales</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>8 imágenes de producto o servicio con apoyo de IA</li>
+        </ul>
+        <a href="https://wa.me/573505457420?text=Hola%2C%20quiero%20informacion%20sobre%20el%20plan%20Emprendedor%20de%20manejo%20de%20redes%20sociales%20para%20salud." class="btn btn-ghost btn-block" target="_blank" rel="noopener">Elegir plan Emprendedor</a>
+      </div>
 
       <div class="plan reveal">
         <h3>Básico</h3>
