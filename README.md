@@ -12,11 +12,40 @@ listo para publicarse con GitHub Pages.
 ## Estructura
 
 - **`index.html`** — la landing completa (una sola página).
-- **`assets/biofinanzas-logo.jpg`** — logo real de Bio Finanzas.
+- **`assets/logos/`** — los 5 logos del sitio, cada uno con nombre fijo
+  (ver abajo cómo reemplazarlos por los reales).
 
 Cada producto y cada plan tiene su propio botón de WhatsApp con un mensaje
 ya redactado, que abre `wa.me/573505457420` (WhatsApp de Bio Marketing) con
 el texto correspondiente.
+
+## Subir un logo real (sin tocar código)
+
+Todos los logos son archivos independientes en `assets/logos/`, así que para
+poner el logo real de cualquier producto **no necesitas editar el HTML**:
+solo reemplaza el archivo por uno tuyo que tenga el **mismo nombre exacto**.
+
+| Producto | Archivo a reemplazar | Formato |
+|---|---|---|
+| Bio Marketing | `assets/logos/biomarketing.png` | PNG, cuadrado (ideal 512×512) |
+| Biosoft | `assets/logos/biosoft.png` | PNG, cuadrado |
+| BioFutbol | `assets/logos/biofutbol.png` | PNG, cuadrado |
+| Bio Contador | `assets/logos/biocontador.png` | PNG, cuadrado |
+| Bio Finanzas | `assets/logos/biofinanzas.jpg` | JPG, cuadrado |
+
+Pasos en GitHub (sin instalar nada):
+
+1. Entra a la carpeta `assets/logos` en este repositorio.
+2. Clic en **Add file → Upload files**.
+3. Arrastra tu logo nuevo — debe llamarse **exactamente igual** al que vas a
+   reemplazar (por ejemplo `biosoft.png`), GitHub te va a preguntar si quieres
+   sobrescribirlo.
+4. Confirma el commit ("Commit changes").
+5. En 1-2 minutos GitHub Pages se actualiza solo y el logo nuevo aparece en
+   la landing — no hace falta tocar `index.html` para nada.
+
+Si tu logo no es cuadrado, igual funciona: se ajusta automáticamente dentro
+de un marco cuadrado sin recortarse ni deformarse.
 
 ## Publicar el sitio (GitHub Pages)
 
@@ -35,14 +64,5 @@ el texto correspondiente.
   Reemplaza ambos con buscar y reemplazar si cambian.
 - **Precios de los planes de redes sociales**: sección `id="redes-salud"`
   en `index.html`, dentro de `.pricing-grid` (tres bloques `.plan`).
-- **Logos**: los de Biosoft, BioFutbol y Bio Contador son íconos SVG
-  embebidos directamente en el HTML (fáciles de recolorear). El de Bio
-  Finanzas es la imagen real en `assets/biofinanzas-logo.jpg`. Para poner
-  un logo real de Biosoft o Bio Contador cuando existan, reemplaza el
-  `<svg>` correspondiente por una etiqueta `<img>` apuntando a un archivo
-  en `assets/`.
-- **Logo de Bio Marketing**: hoy es un ícono SVG (anillo morado/naranja +
-  "BM") inspirado en el logo real del grupo. Si quieres usar el archivo de
-  logo original en PNG, agrégalo en `assets/biomarketing-logo.png` y
-  reemplaza el bloque `<svg class="brand-mark">` (aparece en el `nav` y en
-  el `footer`) por un `<img src="assets/biomarketing-logo.png">`.
+- **Logos**: ver la sección "Subir un logo real" arriba — se reemplazan
+  subiendo un archivo con el mismo nombre, sin tocar `index.html`.

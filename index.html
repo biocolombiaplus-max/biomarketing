@@ -108,7 +108,10 @@ nav.scrolled{border-color:var(--border)}
 .hero h1{font-size:clamp(2.2rem,5.4vw,3.8rem);max-width:920px;margin-bottom:22px}
 .hero p.lead{max-width:640px;color:var(--ink2);font-size:1.15rem;margin-bottom:38px}
 .hero-cta{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin-bottom:56px}
-.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.95rem;padding:15px 28px;border-radius:99px;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;border:none}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:.95rem;padding:15px 28px;border-radius:99px;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;border:none;position:relative;overflow:hidden;isolation:isolate}
+.btn::before{content:'';position:absolute;top:0;left:-60%;width:35%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.4),transparent);transform:skewX(-20deg);transition:left .65s cubic-bezier(.2,.7,.2,1);z-index:1;pointer-events:none}
+.btn:hover::before{left:130%}
+@media(prefers-reduced-motion:reduce){.btn::before{display:none}}
 .btn svg{width:19px;height:19px;flex:none}
 .btn-whatsapp{background:var(--whatsapp);color:#04170c;box-shadow:0 10px 30px rgba(37,211,102,.35)}
 .btn-whatsapp:hover{transform:translateY(-2px);box-shadow:0 14px 38px rgba(37,211,102,.5)}
@@ -126,21 +129,28 @@ nav.scrolled{border-color:var(--border)}
 @media(max-width:720px){.stats-bar{grid-template-columns:repeat(2,1fr)}}
 
 /* ---- LOGO STRIP ---- */
-.logo-strip{padding:72px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2)}
+.logo-strip{padding:72px 0 56px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2);overflow:hidden}
 .logo-strip p{text-align:center;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-bottom:40px}
-.logo-strip-row{display:flex;align-items:stretch;justify-content:center;gap:clamp(18px,3.4vw,32px);flex-wrap:wrap;max-width:920px;margin:0 auto}
-.brand-chip{display:flex;flex-direction:column;align-items:center;gap:16px;width:150px;padding:26px 14px;background:var(--surface);border:1px solid var(--border);border-radius:18px;transition:transform .25s,border-color .25s,box-shadow .25s}
+.marquee{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marquee-track{display:flex;align-items:stretch;gap:clamp(18px,3.4vw,32px);width:max-content;animation:marqueeScroll 28s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes marqueeScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.brand-chip{display:flex;flex-direction:column;align-items:center;gap:16px;width:150px;flex:none;padding:26px 14px;background:var(--surface);border:1px solid var(--border);border-radius:18px;transition:transform .25s,border-color .25s,box-shadow .25s}
 .brand-chip:hover{transform:translateY(-5px);border-color:var(--border2);box-shadow:0 16px 36px rgba(0,0,0,.35)}
 .brand-chip .badge{width:76px;height:76px;border-radius:20px;overflow:hidden;flex:none;box-shadow:0 10px 24px rgba(0,0,0,.35)}
 .brand-chip .badge img{width:100%;height:100%;object-fit:contain;background:#0B1220}
 .brand-chip .badge svg{width:100%;height:100%;display:block}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
 .brand-chip span{font-size:.86rem;font-weight:700;text-align:center;color:var(--ink)}
 
 /* ---- PRODUCT CARDS ---- */
 .products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
 @media(max-width:860px){.products-grid{grid-template-columns:1fr}}
-.pcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:34px;display:flex;flex-direction:column;transition:border-color .25s,transform .25s;position:relative;overflow:hidden}
-.pcard:hover{transform:translateY(-4px);border-color:var(--border2)}
+.pcard{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:34px;display:flex;flex-direction:column;transition:border-color .25s,transform .12s ease-out,box-shadow .3s;position:relative;overflow:hidden;transform-style:preserve-3d;will-change:transform}
+.pcard:hover{border-color:var(--border2);box-shadow:0 24px 50px rgba(0,0,0,.4)}
+.pcard::after{content:'';position:absolute;inset:0;border-radius:inherit;background:radial-gradient(280px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.09),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+.pcard:hover::after{opacity:1}
+@media(prefers-reduced-motion:reduce){.pcard{transition:none}}
 .pcard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--accent-grad,var(--grad-brand))}
 .pcard-top{display:flex;align-items:center;gap:16px;margin-bottom:22px}
 .pcard-badge{width:60px;height:60px;flex:none;border-radius:16px;overflow:hidden;box-shadow:0 10px 26px rgba(0,0,0,.35)}
@@ -243,11 +253,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 32px}
 <!-- ══ NAV ══ -->
 <nav id="nav">
   <a href="#top" class="brand">
-    <svg class="brand-mark" viewBox="0 0 100 100"><defs><linearGradient id="navg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6D28D9"/><stop offset="1" stop-color="#F97316"/></linearGradient></defs>
-      <circle cx="50" cy="50" r="46" fill="#0f0c1c"/>
-      <circle cx="50" cy="50" r="37" fill="none" stroke="url(#navg)" stroke-width="6"/>
-      <text x="50" y="63" text-anchor="middle" font-family="Manrope,Arial,sans-serif" font-weight="800" font-size="36" fill="url(#navg)">BM</text>
-    </svg>
+    <img class="brand-mark" src="assets/logos/biomarketing.png" alt="Bio Marketing">
     <span class="brand-word">Bio<b>Marketing</b></span>
   </a>
   <div class="nav-links" id="navLinks">
@@ -281,10 +287,10 @@ footer{border-top:1px solid var(--border);padding:64px 0 32px}
       <a href="#productos" class="btn btn-ghost">Ver portafolio</a>
     </div>
     <div class="stats-bar reveal">
-      <div class="stat"><b>4</b><span>Productos con IA</span></div>
-      <div class="stat"><b>3</b><span>Planes de redes salud</span></div>
-      <div class="stat"><b>+2</b><span>Servicios de IA a medida</span></div>
-      <div class="stat"><b>100%</b><span>Soporte humano real</span></div>
+      <div class="stat"><b class="counter" data-target="4">0</b><span>Productos con IA</span></div>
+      <div class="stat"><b class="counter" data-target="4">0</b><span>Planes de redes sociales</span></div>
+      <div class="stat"><b class="counter" data-target="2" data-prefix="+">0</b><span>Servicios de IA a medida</span></div>
+      <div class="stat"><b class="counter" data-target="100" data-suffix="%">0</b><span>Soporte humano real</span></div>
     </div>
   </div>
 </header>
@@ -293,40 +299,17 @@ footer{border-top:1px solid var(--border);padding:64px 0 32px}
 <div class="logo-strip">
   <div class="wrap">
     <p>Nuestro ecosistema de productos</p>
-    <div class="logo-strip-row">
-      <div class="brand-chip">
-        <div class="badge"><svg viewBox="0 0 100 100"><defs><linearGradient id="ls1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4d3"/><stop offset="1" stop-color="#0b6f6e"/></linearGradient></defs>
-          <rect width="100" height="100" fill="url(#ls1)"/>
-          <path d="M40 20h20v6l6 30a4 4 0 0 1-4 5H38a4 4 0 0 1-4-5l6-30z" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
-          <path d="M35 58h30" stroke="#fff" stroke-width="4"/>
-          <circle cx="44" cy="70" r="3.4" fill="#fff"/><circle cx="55" cy="75" r="2.6" fill="#fff"/><circle cx="60" cy="66" r="2" fill="#fff"/>
-        </svg></div>
-        <span>Biosoft</span>
-      </div>
-      <div class="brand-chip">
-        <div class="badge"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#0B1626"/>
-          <rect x="14" y="16" width="72" height="68" rx="8" fill="url(#pitchg2)"/>
-          <line x1="14" y1="50" x2="86" y2="50" stroke="#fff" stroke-width="2.2" opacity=".85"/>
-          <circle cx="50" cy="50" r="13" fill="none" stroke="#fff" stroke-width="2.2" opacity=".85"/>
-          <circle cx="50" cy="50" r="2.2" fill="#fff"/>
-          <defs><linearGradient id="pitchg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2ecc55"/><stop offset="1" stop-color="#0e7d29"/></linearGradient></defs>
-        </svg></div>
-        <span>BioFutbol</span>
-      </div>
-      <div class="brand-chip">
-        <div class="badge"><svg viewBox="0 0 100 100"><defs><linearGradient id="ls3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0ABFBF"/><stop offset="1" stop-color="#0D2235"/></linearGradient></defs>
-          <rect width="100" height="100" fill="url(#ls3)"/>
-          <rect x="30" y="18" width="40" height="64" rx="6" fill="none" stroke="#fff" stroke-width="4"/>
-          <line x1="38" y1="34" x2="62" y2="34" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-          <line x1="38" y1="46" x2="56" y2="46" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-          <path d="M38 60l7 7 15-15" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg></div>
-        <span>Bio Contador</span>
-      </div>
-      <div class="brand-chip">
-        <div class="badge"><img src="assets/biofinanzas-logo.jpg" alt="Bio Finanzas"></div>
-        <span>Bio Finanzas</span>
-      </div>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <div class="brand-chip"><div class="badge"><img src="assets/logos/biosoft.png" alt="Biosoft" loading="lazy"></div><span>Biosoft</span></div>
+      <div class="brand-chip"><div class="badge"><img src="assets/logos/biofutbol.png" alt="BioFutbol" loading="lazy"></div><span>BioFutbol</span></div>
+      <div class="brand-chip"><div class="badge"><img src="assets/logos/biocontador.png" alt="Bio Contador" loading="lazy"></div><span>Bio Contador</span></div>
+      <div class="brand-chip"><div class="badge"><img src="assets/logos/biofinanzas.jpg" alt="Bio Finanzas" loading="lazy"></div><span>Bio Finanzas</span></div>
+      <div class="brand-chip" aria-hidden="true"><div class="badge"><img src="assets/logos/biosoft.png" alt="" loading="lazy"></div><span>Biosoft</span></div>
+      <div class="brand-chip" aria-hidden="true"><div class="badge"><img src="assets/logos/biofutbol.png" alt="" loading="lazy"></div><span>BioFutbol</span></div>
+      <div class="brand-chip" aria-hidden="true"><div class="badge"><img src="assets/logos/biocontador.png" alt="" loading="lazy"></div><span>Bio Contador</span></div>
+      <div class="brand-chip" aria-hidden="true"><div class="badge"><img src="assets/logos/biofinanzas.jpg" alt="" loading="lazy"></div><span>Bio Finanzas</span></div>
     </div>
   </div>
 </div>
@@ -343,12 +326,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 32px}
 
       <article class="pcard biosoft reveal">
         <div class="pcard-top">
-          <div class="pcard-badge"><svg viewBox="0 0 100 100"><defs><linearGradient id="bs1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2dd4d3"/><stop offset="1" stop-color="#0b6f6e"/></linearGradient></defs>
-            <rect width="100" height="100" fill="url(#bs1)"/>
-            <path d="M40 20h20v6l6 30a4 4 0 0 1-4 5H38a4 4 0 0 1-4-5l6-30z" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
-            <path d="M35 58h30" stroke="#fff" stroke-width="4"/>
-            <circle cx="44" cy="70" r="3.4" fill="#fff"/><circle cx="55" cy="75" r="2.6" fill="#fff"/><circle cx="60" cy="66" r="2" fill="#fff"/>
-          </svg></div>
+          <div class="pcard-badge"><img src="assets/logos/biosoft.png" alt="Biosoft" loading="lazy"></div>
           <div><span class="pcard-tag">Software · Laboratorios clínicos</span><h3>Biosoft</h3></div>
         </div>
         <p class="desc">Sistema de información con Inteligencia Artificial para la gestión integral de laboratorios clínicos: órdenes, resultados, facturación e interoperabilidad en un solo lugar, pensado para agilizar la operación diaria y reducir errores manuales.</p>
@@ -371,14 +349,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 32px}
 
       <article class="pcard futbol reveal">
         <div class="pcard-top">
-          <div class="pcard-badge"><svg viewBox="0 0 100 100"><rect width="100" height="100" fill="#0B1626"/>
-            <rect x="14" y="16" width="72" height="68" rx="8" fill="url(#pitchg3)"/>
-            <line x1="14" y1="50" x2="86" y2="50" stroke="#fff" stroke-width="2.4" opacity=".85"/>
-            <circle cx="50" cy="50" r="13" fill="none" stroke="#fff" stroke-width="2.4" opacity=".85"/>
-            <circle cx="50" cy="50" r="2.2" fill="#fff"/>
-            <path d="M26 16h48v14a9 9 0 0 1-9 9H35a9 9 0 0 1-9-9z" fill="none" stroke="#fff" stroke-width="2" opacity=".8"/>
-            <defs><linearGradient id="pitchg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2ecc55"/><stop offset="1" stop-color="#0e7d29"/></linearGradient></defs>
-          </svg></div>
+          <div class="pcard-badge"><img src="assets/logos/biofutbol.png" alt="BioFutbol" loading="lazy"></div>
           <div><span class="pcard-tag">App con IA · Clubes y escuelas de fútbol</span><h3>BioFutbol</h3></div>
         </div>
         <p class="desc">Aplicación con Inteligencia Artificial para la gestión integral de clubes y escuelas de fútbol: jugadores, entrenamientos, cobros y comunicación con las familias — 100% personalizada con el logo y colores de tu club.</p>
@@ -397,13 +368,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 32px}
 
       <article class="pcard contador reveal">
         <div class="pcard-top">
-          <div class="pcard-badge"><svg viewBox="0 0 100 100"><defs><linearGradient id="ct1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0ABFBF"/><stop offset="1" stop-color="#0D2235"/></linearGradient></defs>
-            <rect width="100" height="100" fill="url(#ct1)"/>
-            <rect x="30" y="18" width="40" height="64" rx="6" fill="none" stroke="#fff" stroke-width="4"/>
-            <line x1="38" y1="34" x2="62" y2="34" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-            <line x1="38" y1="46" x2="56" y2="46" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-            <path d="M38 60l7 7 15-15" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg></div>
+          <div class="pcard-badge"><img src="assets/logos/biocontador.png" alt="Bio Contador" loading="lazy"></div>
           <div><span class="pcard-tag">Software y app · Declaración de renta</span><h3>Bio Contador</h3></div>
         </div>
         <p class="desc">Software y app web para elaborar declaraciones de renta con Inteligencia Artificial, con el respaldo real de una contadora certificada detrás de cada proceso — para personas naturales y para contadores que quieran digitalizar su propia gestión con clientes.</p>
@@ -426,7 +391,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 32px}
 
       <article class="pcard finanzas reveal">
         <div class="pcard-top">
-          <div class="pcard-badge"><img src="assets/biofinanzas-logo.jpg" alt="Bio Finanzas"></div>
+          <div class="pcard-badge"><img src="assets/logos/biofinanzas.jpg" alt="Bio Finanzas" loading="lazy"></div>
           <div><span class="pcard-tag">Plataforma · Recuperación de cartera</span><h3>Bio Finanzas</h3></div>
         </div>
         <p class="desc">Plataforma tecnológica para que entidades financieras y empresas con cartera pendiente gestionen con Inteligencia Artificial la recuperación de cartera y el proceso comercial de sus asesores, con ranking en vivo y campañas de remarketing.</p>
@@ -646,11 +611,7 @@ footer{border-top:1px solid var(--border);padding:64px 0 32px}
     <div class="footer-top">
       <div class="footer-brand">
         <a href="#top" class="brand">
-          <svg class="brand-mark" viewBox="0 0 100 100"><defs><linearGradient id="fg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6D28D9"/><stop offset="1" stop-color="#F97316"/></linearGradient></defs>
-            <circle cx="50" cy="50" r="46" fill="#0f0c1c"/>
-            <circle cx="50" cy="50" r="37" fill="none" stroke="url(#fg)" stroke-width="6"/>
-            <text x="50" y="63" text-anchor="middle" font-family="Manrope,Arial,sans-serif" font-weight="800" font-size="36" fill="url(#fg)">BM</text>
-          </svg>
+          <img class="brand-mark" src="assets/logos/biomarketing.png" alt="Bio Marketing">
           <span class="brand-word">Bio<b>Marketing</b></span>
         </a>
         <p>Innovación digital: software, apps y marketing con Inteligencia Artificial para negocios colombianos.</p>
@@ -698,6 +659,39 @@ const io = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+function animateCounter(el){
+  const target = parseInt(el.dataset.target, 10) || 0;
+  const prefix = el.dataset.prefix || '';
+  const suffix = el.dataset.suffix || '';
+  const dur = 1300;
+  const start = performance.now();
+  function tick(now){
+    const p = Math.min((now - start) / dur, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = prefix + Math.round(target * eased) + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+const counterIO = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { animateCounter(e.target); counterIO.unobserve(e.target); } });
+}, { threshold: 0.4 });
+document.querySelectorAll('.counter').forEach(el => counterIO.observe(el));
+
+if (!window.matchMedia('(pointer: coarse)').matches) {
+  document.querySelectorAll('.pcard').forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = e.clientX - r.left, y = e.clientY - r.top;
+      const cx = x / r.width - 0.5, cy = y / r.height - 0.5;
+      card.style.setProperty('--mx', x + 'px');
+      card.style.setProperty('--my', y + 'px');
+      card.style.transform = `perspective(900px) rotateX(${(-cy * 5).toFixed(2)}deg) rotateY(${(cx * 5).toFixed(2)}deg) translateY(-4px)`;
+    });
+    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+  });
+}
 </script>
 </body>
 </html>
