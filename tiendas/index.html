@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tiendas Virtuales Profesionales | Bio Marketing</title>
+<meta name="description" content="Creamos tu tienda virtual o página web profesional, 100% personalizada, con carrito de compras, pago contra entrega, pasarelas de pago y panel administrativo. Lista en 2 a 5 días desde $198.000. Sin mensualidades en dólares.">
+<meta name="theme-color" content="#0B0716">
+<meta property="og:title" content="Tu tienda online profesional desde $198.000 | Bio Marketing">
+<meta property="og:description" content="Tienda estilo Shopify, 100% personalizada, sin mensualidades en dólares. Carrito, pago contra entrega, tarjetas, PSE y panel administrativo. Entrega en 2 a 5 días.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logo.png">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://checkout.epayco.co/checkout.js" defer></script>
+<style>
+:root{
+  --bg:#0B0716;--bg2:#120B24;--card:#160E2C;--card2:#1D1438;
+  --line:rgba(255,255,255,.09);--line2:rgba(255,255,255,.16);
+  --ink:#FFFFFF;--ink2:#C9C2E0;--ink3:#8D84AD;
+  --violet:#8B5CF6;--violet-d:#6D28D9;--pink:#EC4899;--orange:#F97316;
+  --yellow:#FACC15;--lime:#A3E635;--green:#22C55E;--cyan:#22D3EE;--wa:#25D366;
+  --g-main:linear-gradient(120deg,#8B5CF6 0%,#EC4899 50%,#F97316 100%);
+  --g-lime:linear-gradient(120deg,#A3E635,#22C55E);
+  --g-sun:linear-gradient(120deg,#FACC15,#F97316);
+  --r:22px;--r-sm:14px;--maxw:1200px;
+  --display:'Bricolage Grotesque','Plus Jakarta Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+:focus-visible{outline:2px solid var(--yellow);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+section{padding:110px 0;position:relative}
+@media(max-width:760px){section{padding:76px 0}}
+.grad-text{background:var(--g-main);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lime-text{background:var(--g-lime);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sun-text{background:var(--g-sun);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1,h2,h3{font-family:var(--display);line-height:1.05;letter-spacing:-.02em}
+h2{font-size:clamp(2rem,4.6vw,3.4rem);font-weight:800}
+.lead{color:var(--ink2);font-size:1.12rem;max-width:640px}
+.center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:8px 16px;border-radius:99px;background:rgba(139,92,246,.14);border:1px solid rgba(139,92,246,.35);color:#D8CCFF;margin-bottom:18px}
+.tag .dot{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 0 rgba(163,230,53,.7);animation:ping 1.8s infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(163,230,53,.7)}80%,100%{box-shadow:0 0 0 10px rgba(163,230,53,0)}}
+.sec-head{margin-bottom:56px}
+.sec-head h2{margin-bottom:16px}
+h2 + .lead{margin-top:16px}
+
+/* ambient */
+.aurora{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.aurora span{position:absolute;border-radius:50%;filter:blur(110px);opacity:.35;animation:drift 22s ease-in-out infinite alternate}
+.aurora span:nth-child(1){width:55vw;height:55vw;background:#6D28D9;top:-18vw;left:-14vw}
+.aurora span:nth-child(2){width:40vw;height:40vw;background:#EC4899;top:30vh;right:-16vw;opacity:.22;animation-delay:-6s}
+.aurora span:nth-child(3){width:38vw;height:38vw;background:#F97316;bottom:-18vw;left:20vw;opacity:.16;animation-delay:-12s}
+@keyframes drift{to{transform:translate(6vw,4vh) scale(1.12)}}
+.grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ===== BUTTONS ===== */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;font-weight:800;font-size:1rem;padding:16px 28px;border-radius:16px;transition:transform .25s,box-shadow .25s;overflow:hidden;isolation:isolate;white-space:nowrap;line-height:1.2}
+.btn:hover{transform:translateY(-3px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn svg{width:20px;height:20px;flex-shrink:0}
+.btn::after{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:shine 3.2s ease-in-out infinite;z-index:1;pointer-events:none}
+@keyframes shine{0%,55%{left:-120%}100%{left:160%}}
+.btn > *{position:relative;z-index:2}
+.btn-main{background:var(--g-main);background-size:200% 200%;animation:gshift 6s ease infinite;color:#fff;box-shadow:0 10px 40px -8px rgba(236,72,153,.65),inset 0 1px 0 rgba(255,255,255,.3)}
+.btn-main:hover{box-shadow:0 16px 50px -6px rgba(236,72,153,.85)}
+@keyframes gshift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.btn-wa{background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;box-shadow:0 10px 36px -8px rgba(37,211,102,.7),inset 0 1px 0 rgba(255,255,255,.3);animation:waPulse 2.4s infinite}
+@keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.55),0 10px 36px -8px rgba(37,211,102,.7)}70%{box-shadow:0 0 0 14px rgba(37,211,102,0),0 10px 36px -8px rgba(37,211,102,.7)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0),0 10px 36px -8px rgba(37,211,102,.7)}}
+.btn-pay{background:linear-gradient(135deg,#FACC15,#F97316);color:#1a0b00;box-shadow:0 10px 36px -8px rgba(250,204,21,.6),inset 0 1px 0 rgba(255,255,255,.5)}
+.btn-ghost{background:rgba(255,255,255,.06);border:1px solid var(--line2);color:#fff;backdrop-filter:blur(8px)}
+.btn-ghost::after{display:none}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-block{width:100%}
+.btn-sm{padding:12px 20px;font-size:.92rem;border-radius:13px}
+/* animated border ring */
+.ring{position:relative;border-radius:18px;padding:2px;background:conic-gradient(from var(--a,0deg),#A3E635,#22D3EE,#8B5CF6,#EC4899,#F97316,#FACC15,#A3E635);animation:spin 4s linear infinite;display:inline-flex}
+.ring .btn{border-radius:16px}
+@property --a{syntax:'<angle>';inherits:false;initial-value:0deg}
+@keyframes spin{to{--a:360deg}}
+
+/* ===== TOP BAR ===== */
+.topbar{background:linear-gradient(90deg,#6D28D9,#EC4899,#F97316);font-size:.86rem;font-weight:700;text-align:center;padding:9px 16px;position:relative;z-index:60}
+.topbar b{font-variant-numeric:tabular-nums;background:rgba(0,0,0,.25);padding:2px 8px;border-radius:6px;margin-left:4px}
+
+/* ===== NAV ===== */
+.nav{position:sticky;top:0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.scrolled{background:rgba(11,7,22,.78);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-color:var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:1.2rem}
+.brand img{width:40px;height:40px;border-radius:50%}
+.brand small{display:block;font-family:'Plus Jakarta Sans';font-size:.66rem;font-weight:700;color:var(--ink3);letter-spacing:.14em;text-transform:uppercase;line-height:1}
+.nav-links{display:flex;gap:28px;font-weight:600;font-size:.94rem;color:var(--ink2)}
+.nav-links a:hover{color:#fff}
+@media(max-width:960px){.nav-links{display:none}}
+@media(max-width:520px){.nav .btn-sm span.hide-sm{display:none}}
+
+/* ===== HERO ===== */
+.hero{padding:60px 0 100px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center}
+@media(max-width:1000px){.hero-grid{grid-template-columns:1fr;gap:64px}}
+.hero h1{font-size:clamp(2.5rem,5.8vw,4.6rem);font-weight:800;margin-bottom:22px}
+.hero h1 .hl{position:relative;white-space:nowrap}
+.hero h1 .hl svg{position:absolute;left:0;bottom:-10px;width:100%;height:16px}
+.hero .lead{font-size:1.18rem;margin-bottom:30px}
+.hero .lead strong{color:#fff}
+.price-pill{display:inline-flex;align-items:center;gap:14px;background:rgba(255,255,255,.05);border:1px solid var(--line2);border-radius:18px;padding:10px 18px 10px 10px;margin-bottom:28px}
+.price-pill .p{background:var(--g-lime);color:#0b1400;font-family:var(--display);font-weight:800;font-size:1.5rem;padding:6px 14px;border-radius:12px;line-height:1.1}
+.price-pill .t{font-size:.9rem;color:var(--ink2);line-height:1.35}
+.price-pill .t b{color:#fff}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:30px}
+.hero-checks{display:flex;flex-wrap:wrap;gap:10px 20px;font-size:.92rem;color:var(--ink2);font-weight:600}
+.hero-checks li{display:flex;align-items:center;gap:8px}
+.hero-checks svg{width:18px;height:18px;color:var(--lime)}
+
+/* device mockup */
+.stage{position:relative;perspective:1600px}
+.laptop{position:relative;transform:rotateY(-10deg) rotateX(4deg);transform-style:preserve-3d;animation:floatY 7s ease-in-out infinite}
+@keyframes floatY{0%,100%{translate:0 0}50%{translate:0 -12px}}
+.screen{background:#0e0e12;border-radius:18px 18px 4px 4px;padding:12px 12px 14px;border:1px solid rgba(255,255,255,.14);box-shadow:0 40px 100px -20px rgba(139,92,246,.55),0 0 0 1px rgba(0,0,0,.6)}
+.base{height:16px;margin:0 -6%;background:linear-gradient(#cfd0d8,#8d8f9b);border-radius:0 0 18px 18px;position:relative}
+.base::before{content:'';position:absolute;left:50%;top:0;transform:translateX(-50%);width:16%;height:6px;background:#a6a8b3;border-radius:0 0 8px 8px}
+.store{background:#fff;color:#16131f;border-radius:8px;overflow:hidden;font-size:11px}
+.store-bar{display:flex;align-items:center;gap:6px;padding:7px 10px;background:#f1f0f5;border-bottom:1px solid #e3e1ea}
+.store-bar i{width:8px;height:8px;border-radius:50%;background:#ff5f57}
+.store-bar i:nth-child(2){background:#febc2e}.store-bar i:nth-child(3){background:#28c840}
+.url{flex:1;margin-left:8px;background:#fff;border-radius:6px;padding:3px 10px;font-size:10px;color:#555;display:flex;align-items:center;gap:6px}
+.url svg{width:10px;height:10px;color:#16a34a}
+.store-nav{display:flex;justify-content:space-between;align-items:center;padding:10px 14px}
+.store-logo{font-family:var(--display);font-weight:800;font-size:14px;letter-spacing:-.02em}
+.store-logo span{color:#EC4899}
+.store-menu{display:flex;gap:12px;color:#6b6780;font-weight:600;font-size:10px}
+.cart-ic{position:relative;width:22px;height:22px;border-radius:7px;background:#16131f;color:#fff;display:grid;place-items:center}
+.cart-ic svg{width:12px;height:12px}
+.cart-ic b{position:absolute;top:-6px;right:-6px;background:#EC4899;color:#fff;font-size:9px;width:15px;height:15px;border-radius:50%;display:grid;place-items:center;animation:bump 3s infinite}
+@keyframes bump{0%,80%,100%{transform:scale(1)}85%{transform:scale(1.4)}}
+.store-banner{margin:0 14px;border-radius:10px;padding:14px 16px;background:linear-gradient(120deg,#8B5CF6,#EC4899 60%,#F97316);color:#fff;display:flex;justify-content:space-between;align-items:center}
+.store-banner h4{font-family:var(--display);font-size:16px;line-height:1.1}
+.store-banner small{font-size:9px;opacity:.9}
+.store-banner .sb{background:#fff;color:#16131f;font-weight:800;font-size:9px;padding:6px 10px;border-radius:99px}
+.prods{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:12px 14px 14px}
+.prod{border-radius:8px;overflow:hidden;background:#f4f3f8}
+.ph{aspect-ratio:1;background:linear-gradient(135deg,#ede9fe,#fce7f3);position:relative;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover}
+.prod .info{padding:5px 6px 7px}
+.prod .n{font-weight:700;font-size:9px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prod .pr{font-weight:800;font-size:10px;color:#7C3AED}
+.phone{position:absolute;left:-7%;bottom:-8%;width:31%;background:#0e0e12;border-radius:26px;padding:7px;border:1px solid rgba(255,255,255,.18);box-shadow:0 30px 60px -10px rgba(0,0,0,.7),0 0 40px rgba(236,72,153,.3);animation:floatY 6s ease-in-out infinite;animation-delay:-2s;z-index:3}
+.phone .scr{background:#fff;color:#16131f;border-radius:20px;overflow:hidden;font-size:9px}
+.phone .notch{width:38%;height:12px;background:#0e0e12;border-radius:0 0 10px 10px;margin:0 auto}
+.phone .co{padding:8px 10px 12px}
+.phone .co h5{font-family:var(--display);font-size:12px;margin-bottom:6px}
+.co-item{display:flex;gap:6px;align-items:center;margin-bottom:6px}
+.co-item .ph{width:30px;border-radius:6px;flex-shrink:0}
+.co-item div:last-child{line-height:1.25}
+.co-opt{border:1.5px solid #e5e3ee;border-radius:7px;padding:5px 6px;margin-bottom:4px;font-weight:700;font-size:8.5px;display:flex;align-items:center;gap:5px}
+.co-opt.on{border-color:#22C55E;background:#f0fdf4}
+.co-opt i{width:8px;height:8px;border-radius:50%;border:1.5px solid #bbb}
+.co-opt.on i{border-color:#22C55E;background:#22C55E}
+.co-btn{margin-top:6px;background:linear-gradient(120deg,#8B5CF6,#EC4899);color:#fff;text-align:center;font-weight:800;border-radius:8px;padding:7px}
+.float{position:absolute;z-index:4;background:rgba(22,14,44,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line2);border-radius:16px;padding:11px 14px;display:flex;align-items:center;gap:11px;font-size:.82rem;box-shadow:0 20px 40px -10px rgba(0,0,0,.6);animation:floatY 5s ease-in-out infinite}
+.float .ic{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;flex-shrink:0}
+.float .ic svg{width:19px;height:19px}
+.float b{display:block;font-size:.9rem;line-height:1.2}
+.float small{color:var(--ink3);font-size:.74rem}
+.f1{top:-6%;right:-3%}.f1 .ic{background:var(--g-lime);color:#0b1400}
+.f2{bottom:22%;right:-6%;animation-delay:-1.5s}.f2 .ic{background:var(--g-sun);color:#1a0b00}
+.f3{top:34%;left:-10%;animation-delay:-3s}.f3 .ic{background:var(--g-main)}
+@media(max-width:1000px){.f3{left:-2%}.f2{right:-2%}.f1{right:0}}
+@media(max-width:560px){.float{padding:8px 10px;font-size:.72rem}.float .ic{width:28px;height:28px}.float b{font-size:.78rem}.f3{display:none}.phone{left:-3%}.laptop{transform:none}}
+
+/* image fallback */
+.img-fb img{display:none}
+.img-fb::after{content:attr(data-emoji);position:absolute;inset:0;display:grid;place-items:center;font-size:1.6em}
+
+/* ===== MARQUEE ===== */
+.marquee{padding:26px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.02);overflow:hidden}
+.marquee p{text-align:center;color:var(--ink3);font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px}
+.track{display:flex;gap:14px;width:max-content;animation:scrollX 40s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes scrollX{to{transform:translateX(-50%)}}
+.chip{display:inline-flex;align-items:center;gap:9px;padding:10px 18px;border-radius:99px;background:rgba(255,255,255,.05);border:1px solid var(--line);font-weight:700;white-space:nowrap;font-size:.95rem}
+.chip span{font-size:1.15rem}
+
+/* ===== PAIN ===== */
+.pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:900px){.pain-grid{grid-template-columns:1fr}}
+.pain{background:linear-gradient(180deg,rgba(239,68,68,.08),rgba(255,255,255,.02));border:1px solid rgba(239,68,68,.22);border-radius:var(--r);padding:28px}
+.pain .x{width:44px;height:44px;border-radius:12px;background:rgba(239,68,68,.15);color:#F87171;display:grid;place-items:center;margin-bottom:16px;font-size:1.3rem}
+.pain h3{font-size:1.25rem;margin-bottom:8px}
+.pain p{color:var(--ink2);font-size:.96rem}
+.turn{margin-top:40px;text-align:center;font-family:var(--display);font-size:clamp(1.4rem,3vw,2rem);font-weight:800}
+
+/* ===== BENTO ===== */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.bx{position:relative;background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:var(--r);padding:30px;overflow:hidden;transition:transform .35s,border-color .35s}
+.bx:hover{transform:translateY(-5px);border-color:var(--line2)}
+.bx::before{content:'';position:absolute;width:220px;height:220px;border-radius:50%;filter:blur(70px);opacity:.25;top:-80px;right:-60px;background:var(--c,#8B5CF6);transition:opacity .35s}
+.bx:hover::before{opacity:.45}
+.bx .ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;margin-bottom:18px;background:var(--c,#8B5CF6);color:#fff;box-shadow:0 10px 30px -8px var(--c,#8B5CF6)}
+.bx .ic svg{width:26px;height:26px}
+.bx h3{font-size:1.32rem;margin-bottom:8px}
+.bx p{color:var(--ink2);font-size:.97rem}
+.s2{grid-column:span 2}.s3{grid-column:span 3}.s4{grid-column:span 4}
+@media(max-width:960px){.bento{grid-template-columns:1fr 1fr}.s2,.s3,.s4{grid-column:span 1}.bx.wide{grid-column:span 2}}
+@media(max-width:620px){.bento{grid-template-columns:1fr}.bx.wide{grid-column:span 1}}
+.gw-logos{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.gw-logos span{font-size:.78rem;font-weight:800;padding:7px 12px;border-radius:9px;background:rgba(255,255,255,.07);border:1px solid var(--line)}
+.mini-orders{margin-top:18px;display:grid;gap:8px}
+.mo{display:flex;align-items:center;justify-content:space-between;gap:10px;background:rgba(0,0,0,.25);border:1px solid var(--line);border-radius:12px;padding:10px 14px;font-size:.84rem}
+.mo .st{font-size:.72rem;font-weight:800;padding:4px 10px;border-radius:99px}
+.st.ok{background:rgba(34,197,94,.15);color:#4ADE80}.st.go{background:rgba(250,204,21,.15);color:#FACC15}.st.nw{background:rgba(139,92,246,.2);color:#C4B5FD}
+
+/* ===== COMPARE ===== */
+.cmp{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:stretch}
+@media(max-width:960px){.cmp{grid-template-columns:1fr}}
+.table{align-self:start;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.tr{display:grid;grid-template-columns:1.4fr 1fr 1fr;align-items:center;border-bottom:1px solid var(--line)}
+.tr:last-child{border-bottom:0}
+.tr>div{padding:15px 18px;font-size:.93rem}
+.tr>div:nth-child(2){color:var(--ink3)}
+.tr>div:nth-child(3){background:rgba(163,230,53,.06);font-weight:700}
+.tr.h>div{font-family:var(--display);font-weight:800;font-size:1rem;color:#fff!important}
+.tr.h>div:nth-child(3){background:var(--g-lime);color:#0b1400!important}
+.yes{color:var(--lime)}.no{color:#F87171}
+@media(max-width:560px){.tr>div{padding:12px 10px;font-size:.82rem}}
+.calc{background:linear-gradient(160deg,#1f1442,#160E2C);border:1px solid rgba(139,92,246,.35);border-radius:var(--r);padding:30px;display:flex;flex-direction:column}
+.calc h3{font-size:1.5rem;margin-bottom:6px}
+.calc p{color:var(--ink2);font-size:.95rem}
+.calc label{display:block;font-weight:700;margin:22px 0 10px;font-size:.92rem}
+.calc input[type=range]{width:100%;accent-color:#EC4899}
+.calc .yrs{display:flex;justify-content:space-between;color:var(--ink3);font-size:.78rem;margin-top:4px}
+.calc .rows{margin-top:20px;display:grid;gap:10px}
+.calc .row{display:flex;justify-content:space-between;font-size:.95rem;padding:12px 14px;border-radius:12px;background:rgba(0,0,0,.25)}
+.calc .row b{font-variant-numeric:tabular-nums}
+.calc .save{margin-top:auto;padding-top:20px}
+.calc .save div{background:var(--g-lime);color:#0b1400;border-radius:16px;padding:16px 18px;text-align:center;font-weight:800}
+.calc .save strong{display:block;font-family:var(--display);font-size:2rem;line-height:1.1}
+.fine{font-size:.74rem;color:var(--ink3);margin-top:12px;line-height:1.45}
+
+/* ===== PRICING ===== */
+#planes{background:linear-gradient(180deg,transparent,rgba(109,40,217,.12) 30%,rgba(236,72,153,.08) 70%,transparent)}
+.urgency{display:inline-flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center;background:rgba(250,204,21,.1);border:1px solid rgba(250,204,21,.35);color:#FDE68A;border-radius:14px;padding:10px 18px;font-weight:700;font-size:.92rem;margin-top:22px}
+.cd{display:inline-flex;gap:6px}
+.cd span{background:rgba(0,0,0,.35);border-radius:8px;padding:3px 8px;font-variant-numeric:tabular-nums;color:#fff;font-weight:800}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:start}
+@media(max-width:1060px){.plans{grid-template-columns:1fr;max-width:540px;margin:0 auto}}
+.plan{position:relative;background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line2);border-radius:28px;padding:34px 28px 28px;display:flex;flex-direction:column}
+.plan.pop{border:0;background:linear-gradient(180deg,#2a1857,#1a0f36) padding-box,conic-gradient(from var(--a,0deg),#A3E635,#22D3EE,#8B5CF6,#EC4899,#F97316,#FACC15,#A3E635) border-box;border:2px solid transparent;animation:spin 6s linear infinite;box-shadow:0 30px 80px -20px rgba(236,72,153,.5)}
+@media(min-width:1061px){.plan.pop{transform:scale(1.04);z-index:2}}
+.ribbon{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--g-main);font-weight:800;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;padding:7px 16px;border-radius:99px;white-space:nowrap;box-shadow:0 8px 24px -6px rgba(236,72,153,.7)}
+.ribbon.lime{background:var(--g-lime);color:#0b1400}
+.plan .emoji{font-size:2rem;margin-bottom:8px}
+.plan h3{font-size:1.7rem;margin-bottom:4px}
+.plan .for{color:var(--ink2);font-size:.92rem;min-height:44px}
+.price{margin:20px 0 6px;display:flex;align-items:flex-end;gap:8px;flex-wrap:wrap}
+.price .cur{font-family:var(--display);font-weight:800;font-size:1.3rem;margin-bottom:8px}
+.price .amt{font-family:var(--display);font-weight:800;font-size:3.2rem;line-height:1;letter-spacing:-.03em}
+.price .per{color:var(--ink3);font-size:.85rem;margin-bottom:8px;line-height:1.2}
+.split{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.split span{font-size:.78rem;font-weight:700;padding:6px 11px;border-radius:99px;background:rgba(255,255,255,.06);border:1px solid var(--line)}
+.split span b{color:var(--lime)}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.meta div{background:rgba(0,0,0,.25);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:.78rem;color:var(--ink3);line-height:1.3}
+.meta b{display:block;color:#fff;font-size:.98rem;font-family:var(--display)}
+.feat{display:grid;gap:11px;margin-bottom:24px}
+.feat li{position:relative;padding-left:29px;font-size:.93rem;color:var(--ink2);line-height:1.45}
+.feat li svg{position:absolute;left:0;top:1px;width:19px;height:19px;color:var(--lime)}
+.feat li.off{opacity:.42}.feat li.off svg{color:var(--ink3)}
+.feat li strong{color:#fff}
+.feat li.grp{padding-left:0;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);margin-top:6px}
+.addon{display:flex;gap:12px;align-items:flex-start;background:rgba(34,211,238,.07);border:1px dashed rgba(34,211,238,.4);border-radius:14px;padding:12px 14px;margin-bottom:12px;cursor:pointer;font-size:.86rem;color:var(--ink2);line-height:1.4}
+.addon input{appearance:none;-webkit-appearance:none;width:22px;height:22px;border-radius:7px;border:2px solid var(--cyan);flex-shrink:0;display:grid;place-items:center;margin-top:1px;cursor:pointer}
+.addon input:checked{background:var(--cyan)}
+.addon input:checked::after{content:'✓';color:#00222a;font-weight:900;font-size:14px}
+.addon b{color:#fff}
+.paymode{display:grid;grid-template-columns:1fr 1fr;background:rgba(0,0,0,.3);border-radius:12px;padding:4px;margin-bottom:12px;border:1px solid var(--line)}
+.paymode button{padding:9px 6px;border-radius:9px;font-size:.8rem;font-weight:700;color:var(--ink2);transition:.2s}
+.paymode button.on{background:#fff;color:#16131f}
+.paysum{display:flex;justify-content:space-between;align-items:center;font-size:.86rem;color:var(--ink2);margin-bottom:12px;padding:0 4px}
+.paysum b{font-family:var(--display);font-size:1.25rem;color:#fff;font-variant-numeric:tabular-nums}
+.plan .btns{display:grid;gap:10px;margin-top:auto}
+.paylogos{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin-top:12px}
+.paylogos span{font-size:.66rem;font-weight:800;letter-spacing:.04em;padding:4px 8px;border-radius:6px;background:rgba(255,255,255,.07);color:var(--ink2)}
+.after-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+@media(max-width:900px){.after-plans{grid-template-columns:1fr}}
+.ap{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:18px;padding:18px}
+.ap .i{font-size:1.5rem;line-height:1}
+.ap b{display:block;margin-bottom:2px}
+.ap p{color:var(--ink2);font-size:.88rem}
+
+/* ===== DOMAIN ===== */
+.dom{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+@media(max-width:960px){.dom{grid-template-columns:1fr}}
+.browser{background:#fff;border-radius:18px;overflow:hidden;color:#16131f;box-shadow:0 40px 90px -20px rgba(34,211,238,.35)}
+.browser .top{background:#eeedf3;padding:12px 14px;display:flex;align-items:center;gap:8px}
+.browser .top i{width:11px;height:11px;border-radius:50%;background:#ff5f57}
+.browser .top i:nth-child(2){background:#febc2e}.browser .top i:nth-child(3){background:#28c840}
+.addr{flex:1;margin-left:10px;background:#fff;border-radius:10px;padding:10px 14px;font-size:1.02rem;font-weight:600;display:flex;align-items:center;gap:8px;min-height:44px}
+.addr svg{width:15px;height:15px;color:#16a34a;flex-shrink:0}
+.addr .typed{color:#16131f}.addr .typed em{font-style:normal;color:#7C3AED;font-weight:800}
+.caret{width:2px;height:20px;background:#7C3AED;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.browser .body{padding:26px;display:grid;gap:12px}
+.dline{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:14px;border:1.5px solid #ebe9f2;font-weight:600;font-size:.95rem}
+.dline .b{margin-left:auto;font-size:.72rem;font-weight:800;padding:5px 10px;border-radius:99px;white-space:nowrap}
+.dline.gen .b{background:#f1f0f5;color:#6b6780}
+.dline.pro{border-color:#22C55E;background:#f0fdf4}.dline.pro .b{background:#22C55E;color:#fff}
+.dline code{font-family:inherit;font-weight:800;word-break:break-all}
+.dline.gen code{color:#6b6780}
+.dom-list{display:grid;gap:14px;margin:26px 0}
+.dom-list li{display:flex;gap:12px;color:var(--ink2)}
+.dom-list li b{color:#fff}
+.dom-list .n{width:30px;height:30px;border-radius:9px;background:rgba(34,211,238,.15);color:var(--cyan);display:grid;place-items:center;font-weight:800;flex-shrink:0;font-size:.9rem}
+.dom-price{display:flex;align-items:center;gap:18px;flex-wrap:wrap;background:rgba(34,211,238,.07);border:1px solid rgba(34,211,238,.3);border-radius:18px;padding:18px 22px}
+.dom-price .big{font-family:var(--display);font-weight:800;font-size:2.2rem;line-height:1;color:var(--cyan)}
+.dom-price small{color:var(--ink2)}
+
+/* ===== ADMIN ===== */
+.admin{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+@media(max-width:960px){.admin{grid-template-columns:1fr}}
+.dash{background:#120c24;border:1px solid var(--line2);border-radius:22px;padding:18px;box-shadow:0 40px 90px -20px rgba(139,92,246,.45)}
+.dash-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+.dash-top b{font-family:var(--display);font-size:1.05rem}
+.dash-top span{font-size:.74rem;color:var(--ink3)}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
+.kpi{background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:12px}
+.kpi small{color:var(--ink3);font-size:.72rem;display:block}
+.kpi b{font-family:var(--display);font-size:1.25rem}
+.kpi i{font-style:normal;font-size:.7rem;color:var(--lime);font-weight:800}
+.chart{height:90px;display:flex;align-items:flex-end;gap:6px;padding:10px;background:rgba(255,255,255,.03);border-radius:14px;margin-bottom:14px;border:1px solid var(--line)}
+.chart span{flex:1;border-radius:6px 6px 2px 2px;background:var(--g-main);opacity:.85;transform-origin:bottom;animation:grow 1.2s cubic-bezier(.2,.8,.2,1) both}
+@keyframes grow{from{transform:scaleY(0)}}
+.otable{display:grid;gap:6px}
+.orow{display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-size:.8rem}
+.orow .av{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:.72rem;background:var(--g-main)}
+.orow small{display:block;color:var(--ink3);font-size:.7rem}
+.orow .gd{font-size:.7rem;color:var(--cyan);font-weight:700}
+@media(max-width:520px){.orow{grid-template-columns:auto 1fr auto}.orow .gd{display:none}.kpi b{font-size:1rem}}
+.adm-list{display:grid;gap:16px;margin-top:26px}
+.adm-list li{display:flex;gap:14px}
+.adm-list .i{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;flex-shrink:0;background:rgba(163,230,53,.12);color:var(--lime)}
+.adm-list .i svg{width:22px;height:22px}
+.adm-list b{display:block;font-size:1.02rem}
+.adm-list p{color:var(--ink2);font-size:.93rem}
+.load-box{margin-top:24px;background:linear-gradient(120deg,rgba(250,204,21,.12),rgba(249,115,22,.08));border:1px solid rgba(250,204,21,.35);border-radius:18px;padding:18px 20px}
+.load-box b{color:var(--yellow)}
+.load-calc{display:flex;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap;font-size:.92rem;color:var(--ink2)}
+.load-calc input{width:90px;background:rgba(0,0,0,.35);border:1px solid var(--line2);color:#fff;border-radius:10px;padding:8px 10px;font-weight:800;font-size:1rem;font-family:inherit}
+.load-calc output{font-family:var(--display);font-weight:800;color:#fff;font-size:1.2rem}
+
+/* ===== PROCESS ===== */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s;position:relative}
+@media(max-width:960px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;position:relative}
+.step .num{font-family:var(--display);font-weight:800;font-size:3rem;line-height:1;margin-bottom:12px}
+.step h3{font-size:1.2rem;margin-bottom:6px}
+.step p{color:var(--ink2);font-size:.93rem}
+.step .pill{display:inline-block;margin-top:12px;font-size:.74rem;font-weight:800;padding:5px 11px;border-radius:99px;background:rgba(163,230,53,.14);color:var(--lime)}
+
+/* ===== GALLERY ===== */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:16px}
+.gal .g{position:relative;border-radius:var(--r);overflow:hidden;background:linear-gradient(135deg,#2a1857,#5b1f4c)}
+.gal .g img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.gal .g:hover img{transform:scale(1.07)}
+.gal .g::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(11,7,22,.92));z-index:1}
+.gal .g figcaption{position:absolute;left:18px;right:18px;bottom:16px;z-index:2}
+.gal .g figcaption b{font-family:var(--display);font-size:1.2rem;display:block}
+.gal .g figcaption small{color:var(--ink2);font-size:.82rem}
+.gal .tall{grid-row:span 2}.gal .wide{grid-column:span 2}.gal .full{grid-column:1/-1}
+@media(max-width:900px){.gal{grid-template-columns:1fr 1fr;grid-auto-rows:180px}}
+@media(max-width:520px){.gal{grid-template-columns:1fr}.gal .wide{grid-column:span 1}.gal .tall{grid-row:span 1}}
+.gal .img-fb::after{z-index:0;font-size:3rem}
+
+/* ===== GUARANTEE ===== */
+.guar{display:grid;grid-template-columns:auto 1fr;gap:34px;align-items:center;background:linear-gradient(120deg,rgba(163,230,53,.12),rgba(34,211,238,.08));border:1px solid rgba(163,230,53,.35);border-radius:30px;padding:40px}
+@media(max-width:760px){.guar{grid-template-columns:1fr;text-align:center;padding:30px 22px}.guar .seal{margin:0 auto}}
+.seal{width:150px;height:150px;border-radius:50%;background:var(--g-lime);color:#0b1400;display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:800;line-height:1.05;box-shadow:0 0 0 10px rgba(163,230,53,.15),0 20px 50px -10px rgba(163,230,53,.6);position:relative}
+.seal::before{content:'';position:absolute;inset:-18px;border-radius:50%;border:2px dashed rgba(163,230,53,.5);animation:rot 22s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+.seal span{font-size:2.6rem;display:block}
+.guar h2{font-size:clamp(1.7rem,3.4vw,2.5rem);margin-bottom:10px}
+.guar p{color:var(--ink2)}
+
+/* ===== FAQ ===== */
+.faq{max-width:840px;margin:0 auto;display:grid;gap:12px}
+.qa{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:border-color .3s}
+.qa[open]{border-color:rgba(139,92,246,.5)}
+.qa summary{list-style:none;cursor:pointer;padding:20px 22px;font-weight:700;font-size:1.03rem;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:'+';font-size:1.6rem;font-weight:400;color:var(--violet);transition:transform .3s;line-height:1}
+.qa[open] summary::after{transform:rotate(45deg)}
+.qa div{padding:0 22px 22px;color:var(--ink2)}
+
+/* ===== FINAL CTA ===== */
+.final{text-align:center;border-radius:36px;padding:70px 30px;position:relative;overflow:hidden;background:radial-gradient(circle at 20% 0%,rgba(236,72,153,.45),transparent 50%),radial-gradient(circle at 90% 100%,rgba(249,115,22,.4),transparent 50%),linear-gradient(135deg,#3b1a7a,#1d0f3d);border:1px solid var(--line2)}
+.final h2{font-size:clamp(2.1rem,5vw,3.8rem);margin-bottom:18px}
+.final .lead{margin:0 auto 32px}
+.final .hero-ctas{justify-content:center}
+
+/* ===== FOOTER ===== */
+footer{padding:50px 0 120px;border-top:1px solid var(--line);color:var(--ink3);font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer a:hover{color:#fff}
+
+/* ===== FLOATING ===== */
+.fab{position:fixed;right:20px;bottom:22px;z-index:80;width:62px;height:62px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(37,211,102,.5);animation:waPulse 2.2s infinite}
+.fab svg{width:32px;height:32px;color:#fff}
+.fab .bub{position:absolute;right:74px;background:#fff;color:#16131f;font-weight:700;font-size:.84rem;padding:9px 14px;border-radius:12px;white-space:nowrap;box-shadow:0 10px 30px rgba(0,0,0,.3);opacity:0;transform:translateX(10px);transition:.4s;pointer-events:none}
+.fab .bub.show{opacity:1;transform:none}
+.mbar{display:none}
+@media(max-width:760px){
+  .mbar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:70;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(11,7,22,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line2);transform:translateY(110%);transition:transform .35s}
+  .mbar.show{transform:none}
+  .mbar .btn{padding:13px 10px;font-size:.88rem;border-radius:13px}
+  .fab{bottom:88px;width:56px;height:56px}
+}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+/* toast + loader */
+.toast{position:fixed;left:50%;bottom:100px;transform:translate(-50%,30px);background:#16131f;border:1px solid var(--line2);color:#fff;padding:12px 18px;border-radius:12px;font-weight:600;font-size:.9rem;opacity:0;transition:.35s;z-index:200;max-width:90vw;text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.loader{position:fixed;inset:0;background:rgba(11,7,22,.92);z-index:150;display:none;place-items:center;text-align:center}
+.loader.show{display:grid}
+.loader .sp{width:52px;height:52px;border-radius:50%;border:4px solid rgba(255,255,255,.12);border-top-color:var(--pink);animation:rot .9s linear infinite;margin:0 auto 16px}
+</style>
+</head>
+<body>
+<div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="topbar">🔥 Precio de lanzamiento desde $198.000 · Cupos limitados esta semana — termina en <b id="tb-cd">--:--:--</b></div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#" class="brand"><img src="assets/logo.png" alt="Bio Marketing" width="40" height="40"><div>Bio Marketing<small>Tiendas virtuales</small></div></a>
+    <nav class="nav-links">
+      <a href="#beneficios">Beneficios</a>
+      <a href="#comparar">vs Shopify</a>
+      <a href="#planes">Planes</a>
+      <a href="#dominio">Dominio</a>
+      <a href="#faq">Preguntas</a>
+    </nav>
+    <a class="btn btn-wa btn-sm wa" data-msg="general" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg><span>Hablar <span class="hide-sm">con un asesor</span></span></a>
+  </div>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="tag"><span class="dot"></span> Tiendas estilo Shopify · Hechas en Colombia</div>
+      <h1>Tu tienda online <span class="grad-text">vendiendo 24/7</span> en solo <span class="hl lime-text">2 a 5 días<svg viewBox="0 0 200 16" preserveAspectRatio="none"><path d="M2 12 C 50 2, 150 2, 198 10" fill="none" stroke="url(#ul)" stroke-width="5" stroke-linecap="round"/><defs><linearGradient id="ul"><stop offset="0" stop-color="#A3E635"/><stop offset="1" stop-color="#22C55E"/></linearGradient></defs></svg></span></h1>
+      <p class="lead">Diseñamos tu <strong>tienda virtual o página web profesional, 100% personalizada</strong>, con carrito de compras, pago contra entrega, tarjetas, PSE y panel para gestionar pedidos. <strong>Sin mensualidades en dólares</strong> ni comisiones por venta.</p>
+      <div class="price-pill"><span class="p">$198.000</span><span class="t"><b>Pago único desde</b><br>Pagas 50% para iniciar y 50% al recibirla</span></div>
+      <div class="hero-ctas">
+        <div class="ring"><a href="#planes" class="btn btn-main"><span>Quiero mi tienda online</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <a class="btn btn-wa wa" data-msg="general" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg><span>Resolver dudas</span></a>
+      </div>
+      <ul class="hero-checks">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Pago contra entrega</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Tarjetas y PSE</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Panel administrativo</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Te enseñamos a usarla</li>
+      </ul>
+    </div>
+
+    <div class="stage" aria-hidden="true">
+      <div class="laptop">
+        <div class="screen">
+          <div class="store">
+            <div class="store-bar"><i></i><i></i><i></i><div class="url"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 1 1 6 0v3H9z"/></svg>calzadohamsa.com</div></div>
+            <div class="store-nav"><div class="store-logo">Calzado<span>Hamsa</span></div><div class="store-menu"><span>Mujer</span><span>Hombre</span><span>Ofertas</span></div><div class="cart-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><use href="#i-cart"/></svg><b>3</b></div></div>
+            <div class="store-banner"><div><small>NUEVA COLECCIÓN</small><h4>Hasta 40% OFF</h4></div><span class="sb">Comprar ahora</span></div>
+            <div class="prods">
+              <div class="prod"><div class="ph" data-emoji="👟"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&q=70&auto=format&fit=crop" alt="" loading="eager"></div><div class="info"><div class="n">Tenis Runner</div><div class="pr">$189.900</div></div></div>
+              <div class="prod"><div class="ph" data-emoji="⌚"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=300&q=70&auto=format&fit=crop" alt="" loading="eager"></div><div class="info"><div class="n">Reloj Classic</div><div class="pr">$249.000</div></div></div>
+              <div class="prod"><div class="ph" data-emoji="🎧"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&q=70&auto=format&fit=crop" alt="" loading="eager"></div><div class="info"><div class="n">Audífonos Pro</div><div class="pr">$159.900</div></div></div>
+              <div class="prod"><div class="ph" data-emoji="🕶️"><img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300&q=70&auto=format&fit=crop" alt="" loading="eager"></div><div class="info"><div class="n">Gafas Sun</div><div class="pr">$89.900</div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="base"></div>
+      </div>
+      <div class="phone">
+        <div class="scr"><div class="notch"></div>
+          <div class="co"><h5>Tu carrito 🛒</h5>
+            <div class="co-item"><div class="ph" data-emoji="👟"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=120&q=60&auto=format&fit=crop" alt=""></div><div><b>Tenis Runner</b><br>$189.900</div></div>
+            <div class="co-opt on"><i></i>Pago contra entrega</div>
+            <div class="co-opt"><i></i>Tarjeta / PSE / Nequi</div>
+            <div class="co-btn">Finalizar compra</div>
+          </div>
+        </div>
+      </div>
+      <div class="float f1"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#i-bag"/></svg></div><div><b>¡Nuevo pedido! 🎉</b><small id="f1t">Tenis Runner · $189.900</small></div></div>
+      <div class="float f2"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><use href="#i-truck"/></svg></div><div><b>Guía generada</b><small>Enviado a Medellín</small></div></div>
+      <div class="float f3"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><use href="#i-card"/></svg></div><div><b>Pago aprobado</b><small>PSE · Tarjeta</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-label="Tipos de negocio">
+  <p>Ideal para cualquier tipo de negocio</p>
+  <div class="track" id="track">
+    <span class="chip"><span>👗</span>Ropa y moda</span><span class="chip"><span>👟</span>Calzado</span><span class="chip"><span>💄</span>Cosméticos</span><span class="chip"><span>💊</span>Droguerías</span><span class="chip"><span>🧪</span>Laboratorios</span><span class="chip"><span>🍔</span>Restaurantes</span><span class="chip"><span>🐶</span>Mascotas</span><span class="chip"><span>📱</span>Tecnología</span><span class="chip"><span>🔧</span>Ferreterías</span><span class="chip"><span>💍</span>Joyería</span><span class="chip"><span>🛋️</span>Hogar y decoración</span><span class="chip"><span>🩺</span>Profesionales de salud</span><span class="chip"><span>🎂</span>Repostería</span><span class="chip"><span>🏋️</span>Suplementos</span><span class="chip"><span>🧸</span>Jugueterías</span>
+  </div>
+</div>
+
+<!-- ================= PAIN ================= -->
+<section>
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <div class="tag">¿Te suena familiar?</div>
+      <h2>Cada día sin tienda online<br><span class="grad-text">es dinero que se va a tu competencia</span></h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pain rv"><div class="x">💬</div><h3>Vendes solo por WhatsApp</h3><p>Repites precios 50 veces al día, se te pierden pedidos entre chats y el cliente se aburre esperando el catálogo.</p></div>
+      <div class="pain rv"><div class="x">💸</div><h3>Las plataformas cobran en dólares</h3><p>Mensualidad en USD, apps de pago extra y comisiones por cada venta. Mes a mes tu ganancia se reduce.</p></div>
+      <div class="pain rv"><div class="x">😩</div><h3>No proyectas confianza</h3><p>Sin página web propia, muchos clientes no se atreven a comprar. Hoy, si no estás en internet, no existes.</p></div>
+    </div>
+    <p class="turn rv">Por eso creamos tiendas <span class="lime-text">profesionales, propias y sin mensualidades.</span></p>
+  </div>
+</section>
+
+<!-- ================= BENEFITS ================= -->
+<section id="beneficios">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <div class="tag">Todo lo que incluye</div>
+      <h2>Una tienda completa, <span class="grad-text">lista para vender</span></h2>
+      <p class="lead">Técnicas modernas de e-commerce para que vendas más y sistematices tu negocio desde el primer día.</p>
+    </div>
+    <div class="bento">
+      <div class="bx s2 rv" style="--c:#8B5CF6"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><use href="#i-cart"/></svg></div><h3>Carrito de compras</h3><p>Tus clientes agregan productos, eligen talla o color y compran solos, a cualquier hora.</p></div>
+      <div class="bx s2 rv" style="--c:#22C55E"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><use href="#i-cash"/></svg></div><h3>Pago contra entrega</h3><p>El método favorito en Colombia. Más confianza = más ventas cerradas.</p></div>
+      <div class="bx s2 rv" style="--c:#EC4899"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><use href="#i-phone"/></svg></div><h3>Perfecta en celular</h3><p>Diseño adaptable: se ve espectacular en celular, tablet y computador.</p></div>
+      <div class="bx s3 wide rv" style="--c:#F97316"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><use href="#i-card"/></svg></div><h3>Pasarelas de pago integradas</h3><p>Recibe tarjetas de crédito y débito colombianas e internacionales, PSE y billeteras digitales. Conectamos la pasarela que prefieras.</p>
+        <div class="gw-logos"><span>Wompi</span><span>ePayco</span><span>Mercado Pago</span><span>PayU</span><span>Bold</span><span>PSE</span><span>Nequi</span><span>Visa · Mastercard</span></div></div>
+      <div class="bx s3 wide rv" style="--c:#22D3EE"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><use href="#i-grid"/></svg></div><h3>Panel administrativo</h3><p>Gestiona pedidos, guías de envío y seguimiento a tus clientes desde un solo lugar.</p>
+        <div class="mini-orders"><div class="mo"><span>#1048 · Laura M.</span><span class="st nw">Nuevo</span></div><div class="mo"><span>#1047 · Andrés P.</span><span class="st go">En camino</span></div><div class="mo"><span>#1046 · Camila R.</span><span class="st ok">Entregado</span></div></div></div>
+      <div class="bx s2 rv" style="--c:#FACC15"><div class="ic" style="color:#1a0b00"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><use href="#i-wand"/></svg></div><h3>100% personalizada</h3><p>Tu logo, tus colores, tu estilo. Nada de plantillas genéricas.</p></div>
+      <div class="bx s2 rv" style="--c:#A3E635"><div class="ic" style="color:#0b1400"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><use href="#i-wa"/></svg></div><h3>Conectada a WhatsApp</h3><p>Botón de compra y atención directa a tu WhatsApp en cada producto.</p></div>
+      <div class="bx s2 rv" style="--c:#6D28D9"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><use href="#i-bolt"/></svg></div><h3>Rápida y segura</h3><p>Certificado SSL, carga veloz y optimizada para aparecer en Google.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMPARE ================= -->
+<section id="comparar">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <div class="tag">Haz la cuenta</div>
+      <h2>La misma experiencia de Shopify,<br><span class="lime-text">sin los cobros elevados</span></h2>
+      <p class="lead">Pagas una sola vez por la creación. Tu tienda es tuya, en pesos colombianos y sin sorpresas cada mes.</p>
+    </div>
+    <div class="cmp">
+      <div class="table rv">
+        <div class="tr h"><div>Característica</div><div>Shopify</div><div>Bio Marketing</div></div>
+        <div class="tr"><div>Mensualidad de la plataforma</div><div>USD 29 – 39+/mes*</div><div class="yes">$0 de mensualidad</div></div>
+        <div class="tr"><div>Comisión por cada venta</div><div>Sí, según plan</div><div class="yes">0% de nuestra parte</div></div>
+        <div class="tr"><div>Cobros en</div><div>Dólares</div><div class="yes">Pesos colombianos</div></div>
+        <div class="tr"><div>Diseño y montaje</div><div>Lo haces tú</div><div class="yes">Lo hacemos por ti</div></div>
+        <div class="tr"><div>Pago contra entrega</div><div>Con apps extra</div><div class="yes">Incluido</div></div>
+        <div class="tr"><div>Soporte en español por WhatsApp</div><div class="no">Limitado</div><div class="yes">Directo con tu asesor</div></div>
+        <div class="tr"><div>Capacitación personalizada</div><div class="no">No</div><div class="yes">Incluida</div></div>
+      </div>
+      <div class="calc rv">
+        <h3>💰 Calcula tu ahorro</h3>
+        <p>Compara lo que pagarías en mensualidades frente a nuestro pago único.</p>
+        <label for="yrs">Tiempo con tu tienda: <span id="yrs-l" class="sun-text">2 años</span></label>
+        <input type="range" id="yrs" min="1" max="5" value="2">
+        <div class="yrs"><span>1 año</span><span>5 años</span></div>
+        <div class="rows">
+          <div class="row"><span>Shopify Basic + 2 apps aprox.</span><b id="c-shop">$0</b></div>
+          <div class="row"><span>Bio Marketing · Plan Emprende</span><b id="c-bio">$198.000</b></div>
+        </div>
+        <div class="save"><div>Te ahorras aproximadamente<strong id="c-save">$0</strong></div></div>
+        <p class="fine">*Valores de referencia con plan Basic de Shopify (USD 39/mes) más dos apps de USD 10/mes, a una TRM aproximada de $4.000. Excluye comisiones y dominio. Precios de Shopify pueden variar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section id="planes">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <div class="tag"><span class="dot"></span> Planes de lanzamiento</div>
+      <h2>Elige el plan perfecto<br><span class="grad-text">para tu negocio</span></h2>
+      <p class="lead">Según el número de productos o servicios y el nivel de personalización. Pago único, sin mensualidades.</p>
+      <div class="urgency">⏳ Precios de lanzamiento terminan en <span class="cd" id="cd"><span>0d</span><span>00h</span><span>00m</span><span>00s</span></span></div>
+    </div>
+
+    <div class="plans">
+      <!-- PLAN 1 -->
+      <article class="plan rv" data-plan="Emprende" data-price="198000">
+        <div class="ribbon lime">Ideal para empezar</div>
+        <div class="emoji">🚀</div>
+        <h3>Emprende</h3>
+        <p class="for">Pequeños comerciantes y emprendedores que quieren vender online ya.</p>
+        <div class="price"><span class="cur">$</span><span class="amt">198.000</span><span class="per">COP<br>pago único</span></div>
+        <div class="split"><span>Inicias con <b>$99.000</b></span><span>Resto al entregar</span></div>
+        <div class="meta"><div><b>Hasta 30</b>productos o servicios</div><div><b>2 días</b>tiempo de entrega</div></div>
+        <ul class="feat">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Tienda funcional con <strong>carrito de compras</strong></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg><strong>Pago contra entrega</strong> + pedidos a WhatsApp</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Personalizada con tu logo y colores</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg><strong>Módulo administrativo</strong>: pedidos, guías y seguimiento</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Diseño adaptable a celular + certificado SSL</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Dominio genérico incluido (ej: <em>tutienda.vercel.app</em>)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Capacitación para subir tus productos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>1 ronda de ajustes</li>
+          <li class="off"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-x"/></svg>Pasarela de pagos con tarjeta / PSE</li>
+        </ul>
+        <div class="btns">
+          <label class="addon"><input type="checkbox" class="dom-chk"><span><b>+ Dominio propio .com</b> (ej: calzadohamsa.com) por $85.000/año</span></label>
+          <div class="paymode"><button type="button" class="on" data-mode="half">Anticipo 50%</button><button type="button" data-mode="full">Pago total</button></div>
+          <div class="paysum"><span>Pagas hoy</span><b class="pay-now">$99.000</b></div>
+          <button type="button" class="btn btn-pay btn-block pay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><use href="#i-card"/></svg><span>Pagar con tarjeta o PSE</span></button>
+          <a class="btn btn-wa btn-block wa" data-msg="Emprende" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg><span>Adquirir por WhatsApp</span></a>
+          <div class="paylogos"><span>VISA</span><span>MASTERCARD</span><span>PSE</span><span>AMEX</span><span>ePayco</span></div>
+        </div>
+      </article>
+
+      <!-- PLAN 2 -->
+      <article class="plan pop rv" data-plan="Crece" data-price="490000">
+        <div class="ribbon">⭐ El más elegido</div>
+        <div class="emoji">🔥</div>
+        <h3>Crece</h3>
+        <p class="for">Negocios que quieren recibir pagos con tarjeta y vender a todo el país.</p>
+        <div class="price"><span class="cur">$</span><span class="amt">490.000</span><span class="per">COP<br>pago único</span></div>
+        <div class="split"><span>Inicias con <b>$245.000</b></span><span>Resto al entregar</span></div>
+        <div class="meta"><div><b>Hasta 150</b>productos o servicios</div><div><b>3 a 4 días</b>tiempo de entrega</div></div>
+        <ul class="feat">
+          <li class="grp">Todo lo del plan Emprende, más:</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg><strong>Pasarela de pagos</strong>: Wompi, ePayco, Mercado Pago o la que elijas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Tarjetas crédito/débito <strong>nacionales e internacionales</strong>, PSE y Nequi</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Diseño personalizado premium con banners</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Categorías, filtros, variantes (talla, color)</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Cupones de descuento y productos en oferta</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>SEO básico + Google Analytics + Píxel de Meta</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Notificaciones de pedido por correo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>2 rondas de ajustes + 15 días de soporte</li>
+        </ul>
+        <div class="btns">
+          <label class="addon"><input type="checkbox" class="dom-chk"><span><b>+ Dominio propio .com</b> (ej: tunegocio.com) por $85.000/año</span></label>
+          <div class="paymode"><button type="button" class="on" data-mode="half">Anticipo 50%</button><button type="button" data-mode="full">Pago total</button></div>
+          <div class="paysum"><span>Pagas hoy</span><b class="pay-now">$245.000</b></div>
+          <button type="button" class="btn btn-pay btn-block pay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><use href="#i-card"/></svg><span>Pagar con tarjeta o PSE</span></button>
+          <a class="btn btn-wa btn-block wa" data-msg="Crece" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg><span>Adquirir por WhatsApp</span></a>
+          <div class="paylogos"><span>VISA</span><span>MASTERCARD</span><span>PSE</span><span>AMEX</span><span>ePayco</span></div>
+        </div>
+      </article>
+
+      <!-- PLAN 3 -->
+      <article class="plan rv" data-plan="Pro Empresarial" data-price="890000">
+        <div class="ribbon" style="background:linear-gradient(120deg,#22D3EE,#8B5CF6)">💎 Máxima personalización</div>
+        <div class="emoji">👑</div>
+        <h3>Pro Empresarial</h3>
+        <p class="for">Empresas y marcas que buscan una tienda a la medida, automatizada y escalable.</p>
+        <div class="price"><span class="cur">$</span><span class="amt">890.000</span><span class="per">COP<br>pago único</span></div>
+        <div class="split"><span>Inicias con <b>$445.000</b></span><span>Resto al entregar</span></div>
+        <div class="meta"><div><b>Ilimitados</b>productos o servicios</div><div><b>4 a 5 días</b>tiempo de entrega</div></div>
+        <ul class="feat">
+          <li class="grp">Todo lo del plan Crece, más:</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg><strong>Diseño 100% a la medida</strong> de tu marca</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg><strong>Varias pasarelas</strong> de pago al mismo tiempo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Automatización de guías y seguimiento con transportadoras</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Mensajes automáticos de estado del pedido al cliente</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Reportes de ventas e inventario</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>Varios usuarios en el panel + blog</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>SEO avanzado y velocidad optimizada</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><use href="#i-check"/></svg>3 rondas de ajustes + 30 días de soporte prioritario</li>
+        </ul>
+        <div class="btns">
+          <label class="addon"><input type="checkbox" class="dom-chk"><span><b>+ Dominio propio .com</b> (ej: tumarca.com) por $85.000/año</span></label>
+          <div class="paymode"><button type="button" class="on" data-mode="half">Anticipo 50%</button><button type="button" data-mode="full">Pago total</button></div>
+          <div class="paysum"><span>Pagas hoy</span><b class="pay-now">$445.000</b></div>
+          <button type="button" class="btn btn-pay btn-block pay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><use href="#i-card"/></svg><span>Pagar con tarjeta o PSE</span></button>
+          <a class="btn btn-wa btn-block wa" data-msg="Pro Empresarial" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg><span>Adquirir por WhatsApp</span></a>
+          <div class="paylogos"><span>VISA</span><span>MASTERCARD</span><span>PSE</span><span>AMEX</span><span>ePayco</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="after-plans">
+      <div class="ap rv"><span class="i">🤝</span><div><b>50% para iniciar, 50% al entregar</b><p>Pagas la segunda mitad solo cuando recibes tu tienda funcionando.</p></div></div>
+      <div class="ap rv"><span class="i">⚡</span><div><b>Entrega de 2 a 5 días</b><p>Según el plan y las características de cada tienda o página web.</p></div></div>
+      <div class="ap rv"><span class="i">🔒</span><div><b>Pago 100% seguro</b><p>Procesado por ePayco con encriptación SSL. Tarjeta, PSE y más.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DOMAIN ================= -->
+<section id="dominio">
+  <div class="wrap dom">
+    <div class="rv">
+      <div class="tag">¿Qué es un dominio?</div>
+      <h2>Tu marca con <span class="grad-text">su propia dirección</span> en internet</h2>
+      <p class="lead">El dominio es el nombre con el que tus clientes encuentran tu tienda, como tu dirección en internet. Un dominio propio genera confianza y hace tu marca fácil de recordar.</p>
+      <ul class="dom-list">
+        <li><span class="n">1</span><div><b>Dominio genérico — incluido gratis.</b> Tu tienda queda funcionando con una dirección como <em>calzadohamsa.vercel.app</em>.</div></li>
+        <li><span class="n">2</span><div><b>Dominio personalizado — opcional.</b> Con el nombre exacto de tu negocio: <em>calzadohamsa.com</em>, <em>biomarketing.com</em>, <em>tutienda.co</em>.</div></li>
+        <li><span class="n">3</span><div><b>Nosotros lo compramos y configuramos</b> por ti, con certificado de seguridad incluido.</div></li>
+      </ul>
+      <div class="dom-price"><div class="big">$85.000</div><small>por año · dominio personalizado<br>Se agrega a cualquier plan</small></div>
+    </div>
+    <div class="browser rv" aria-hidden="true">
+      <div class="top"><i></i><i></i><i></i><div class="addr"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 1 1 6 0v3H9z"/></svg><span class="typed" id="typed"></span><span class="caret"></span></div></div>
+      <div class="body">
+        <div class="dline gen">🌐 <code>calzadohamsa.vercel.app</code><span class="b">Genérico · Gratis</span></div>
+        <div class="dline pro">⭐ <code>calzadohamsa.com</code><span class="b">Personalizado</span></div>
+        <div class="dline pro">⭐ <code>biomarketing.com</code><span class="b">Personalizado</span></div>
+        <div class="dline pro">⭐ <code>drogueriasanjose.co</code><span class="b">Personalizado</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ADMIN ================= -->
+<section id="admin">
+  <div class="wrap admin">
+    <div class="dash rv" aria-hidden="true">
+      <div class="dash-top"><b>📊 Panel de tu tienda</b><span>Hoy</span></div>
+      <div class="kpis">
+        <div class="kpi"><small>Ventas hoy</small><b>$1.2M</b> <i>▲ 24%</i></div>
+        <div class="kpi"><small>Pedidos</small><b>18</b> <i>▲ 6</i></div>
+        <div class="kpi"><small>Por enviar</small><b>5</b></div>
+      </div>
+      <div class="chart"><span style="height:35%"></span><span style="height:48%;animation-delay:.1s"></span><span style="height:42%;animation-delay:.2s"></span><span style="height:60%;animation-delay:.3s"></span><span style="height:55%;animation-delay:.4s"></span><span style="height:72%;animation-delay:.5s"></span><span style="height:68%;animation-delay:.6s"></span><span style="height:88%;animation-delay:.7s"></span><span style="height:100%;animation-delay:.8s"></span></div>
+      <div class="otable">
+        <div class="orow"><span class="av">LM</span><div>Laura Martínez<small>Contra entrega · $189.900</small></div><span class="gd">Guía #4821</span><span class="st nw" style="font-size:.68rem;font-weight:800;padding:4px 9px;border-radius:99px">Nuevo</span></div>
+        <div class="orow"><span class="av" style="background:var(--g-lime);color:#0b1400">AP</span><div>Andrés Pérez<small>Tarjeta · $249.000</small></div><span class="gd">Guía #4820</span><span class="st go" style="font-size:.68rem;font-weight:800;padding:4px 9px;border-radius:99px">En camino</span></div>
+        <div class="orow"><span class="av" style="background:var(--g-sun);color:#1a0b00">CR</span><div>Camila Rojas<small>PSE · $159.900</small></div><span class="gd">Guía #4819</span><span class="st ok" style="font-size:.68rem;font-weight:800;padding:4px 9px;border-radius:99px">Entregado</span></div>
+      </div>
+    </div>
+    <div class="rv">
+      <div class="tag">Módulo administrativo</div>
+      <h2>Sistematiza tu negocio <span class="lime-text">sin complicarte</span></h2>
+      <p class="lead">Te entregamos un panel sencillo para que controles todo desde tu celular o computador.</p>
+      <ul class="adm-list">
+        <li><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><use href="#i-bag"/></svg></span><div><b>Gestión de pedidos</b><p>Ve cada pedido, su estado y los datos del cliente en tiempo real.</p></div></li>
+        <li><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><use href="#i-truck"/></svg></span><div><b>Guías y seguimiento</b><p>Registra las guías de envío y mantén informado a tu cliente.</p></div></li>
+        <li><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><use href="#i-up"/></svg></span><div><b>Sube productos en minutos</b><p>Te explicamos paso a paso: foto, nombre, precio y listo. Es muy sencillo y rápido.</p></div></li>
+      </ul>
+      <div class="load-box">
+        <div>📦 <b>¿No tienes tiempo?</b> Nosotros cargamos tus productos por solo <b>$5.000 por producto</b> (opcional).</div>
+        <div class="load-calc"><label for="nprod">Productos:</label><input type="number" id="nprod" min="1" max="999" value="30" inputmode="numeric"><span>=</span><output id="nprod-t">$150.000</output></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section>
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <div class="tag">Para todo tipo de negocio</div>
+      <h2>Diseños que <span class="grad-text">enamoran y venden</span></h2>
+      <p class="lead">Cada tienda se diseña según tu sector, tu público y tu marca.</p>
+    </div>
+    <div class="gal">
+      <figure class="g tall rv" data-emoji="👗"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=700&q=70&auto=format&fit=crop" alt="Tienda de ropa" loading="lazy"><figcaption><b>Moda y boutiques</b><small>Catálogos con tallas y colores</small></figcaption></figure>
+      <figure class="g wide rv" data-emoji="💻"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=70&auto=format&fit=crop" alt="Analítica de ventas" loading="lazy"><figcaption><b>Empresas y servicios</b><small>Páginas web corporativas que generan clientes</small></figcaption></figure>
+      <figure class="g rv" data-emoji="🌸"><img src="https://images.unsplash.com/photo-1541643600914-78b084683601?w=600&q=70&auto=format&fit=crop" alt="Perfumes" loading="lazy"><figcaption><b>Belleza</b><small>Cosméticos y perfumería</small></figcaption></figure>
+      <figure class="g rv" data-emoji="📷"><img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=600&q=70&auto=format&fit=crop" alt="Tecnología" loading="lazy"><figcaption><b>Tecnología</b><small>Accesorios y electrónica</small></figcaption></figure>
+      <figure class="g wide rv" data-emoji="🛍️"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=900&q=70&auto=format&fit=crop" alt="Pago con tarjeta" loading="lazy"><figcaption><b>Comercios y emprendedores</b><small>Vende en tu local y en internet</small></figcaption></figure>
+      <figure class="g full rv" data-emoji="👟"><img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?w=900&q=70&auto=format&fit=crop" alt="Calzado" loading="lazy"><figcaption><b>Calzado y accesorios</b><small>Fotos grandes que venden solas</small></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section>
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <div class="tag">Así de fácil</div>
+      <h2>Tu tienda lista en <span class="lime-text">4 pasos</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step rv"><div class="num grad-text">01</div><h3>Eliges tu plan</h3><p>Escríbenos por WhatsApp o paga en línea. Resolvemos todas tus dudas.</p><span class="pill">Hoy mismo</span></div>
+      <div class="step rv"><div class="num grad-text">02</div><h3>Pagas el 50%</h3><p>Con el anticipo iniciamos la sistematización y el diseño de tu tienda.</p><span class="pill">Tarjeta · PSE · Transferencia</span></div>
+      <div class="step rv"><div class="num grad-text">03</div><h3>La construimos</h3><p>Diseñamos con tu marca y te mostramos avances para ajustar.</p><span class="pill">2 a 5 días</span></div>
+      <div class="step rv"><div class="num grad-text">04</div><h3>¡A vender!</h3><p>Te la entregamos funcionando, te capacitamos y pagas el 50% restante.</p><span class="pill">Incluye capacitación</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GUARANTEE ================= -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="guar rv">
+      <div class="seal"><div><span>50%</span>al ver tu<br>tienda lista</div></div>
+      <div>
+        <h2>Cero riesgo: <span class="lime-text">la ves funcionando antes de terminar de pagar</span></h2>
+        <p>Solo necesitas el 50% para que empecemos. La otra mitad la pagas cuando recibes tu tienda funcionando, con tus ajustes incluidos y la capacitación hecha. Así de seguros estamos de nuestro trabajo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <div class="tag">Preguntas frecuentes</div>
+      <h2>Resolvemos <span class="grad-text">tus dudas</span></h2>
+    </div>
+    <div class="faq">
+      <details class="qa rv"><summary>¿Tengo que pagar mensualidad?</summary><div>No. La creación de tu tienda es un pago único. A diferencia de Shopify, no cobramos mensualidad en dólares ni comisión por tus ventas. Si eliges dominio personalizado, ese tiene un costo de $85.000 al año.</div></details>
+      <details class="qa rv"><summary>¿Cómo funciona el pago?</summary><div>Pagas el 50% para iniciar la elaboración de tu tienda o página web y el 50% restante cuando te la entregamos funcionando. Puedes pagar con tarjeta de crédito, débito o PSE desde esta página, o coordinar por WhatsApp.</div></details>
+      <details class="qa rv"><summary>¿En cuánto tiempo me entregan la tienda?</summary><div>Entre 2 y 5 días hábiles, según el plan y las características de tu página. El tiempo empieza a contar cuando recibimos el anticipo y la información de tu negocio (logo, colores, productos).</div></details>
+      <details class="qa rv"><summary>¿Puedo recibir pagos con tarjeta en mi tienda?</summary><div>Sí, desde el plan Crece. Integramos pasarelas como Wompi, ePayco, Mercado Pago, PayU o la que prefieras, para recibir tarjetas de crédito y débito colombianas e internacionales, PSE y billeteras digitales. Todos los planes incluyen pago contra entrega.</div></details>
+      <details class="qa rv"><summary>¿Qué es el dominio genérico y el personalizado?</summary><div>El genérico viene incluido y es una dirección como <em>tutienda.vercel.app</em>. El personalizado lleva el nombre exacto de tu negocio, como <em>calzadohamsa.com</em> o <em>biomarketing.com</em>; cuesta $85.000 al año y nosotros lo configuramos.</div></details>
+      <details class="qa rv"><summary>¿Quién sube los productos?</summary><div>Tú mismo: te enseñamos y es muy sencillo y rápido. Si prefieres, nosotros los cargamos por $5.000 por producto (opcional).</div></details>
+      <details class="qa rv"><summary>¿Sirve para servicios y no solo productos?</summary><div>Claro. Creamos páginas web profesionales para consultorios, laboratorios, restaurantes, profesionales independientes y empresas de servicios, con agendamiento o contacto directo por WhatsApp.</div></details>
+      <details class="qa rv"><summary>¿Puedo cambiar de plan más adelante?</summary><div>Sí. Puedes empezar con el plan Emprende y luego mejorar tu tienda pagando solo la diferencia de las nuevas funciones.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="final rv">
+      <div class="tag" style="background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#fff"><span class="dot"></span> Cupos limitados esta semana</div>
+      <h2>Mientras lo piensas,<br><span class="sun-text">tu competencia ya está vendiendo online</span></h2>
+      <p class="lead">Empieza hoy con solo $99.000 de anticipo y en pocos días tendrás tu tienda profesional recibiendo pedidos.</p>
+      <div class="hero-ctas">
+        <div class="ring"><a href="#planes" class="btn btn-main"><span>Ver planes y precios</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <a class="btn btn-wa wa" data-msg="general" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg><span>Escribir por WhatsApp</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="#" class="brand"><img src="assets/logo.png" alt="" width="36" height="36"><div>Bio Marketing<small>Tiendas virtuales y páginas web</small></div></a>
+    <div>© <span id="yr"></span> Bio Marketing · Colombia · <a href="mailto:biomarketing.salud@gmail.com">biomarketing.salud@gmail.com</a> · <a class="wa" data-msg="general" href="#" target="_blank" rel="noopener">WhatsApp 350 545 7420</a></div>
+  </div>
+</footer>
+
+<a class="fab wa" data-msg="general" href="#" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><span class="bub" id="bub">👋 ¿Dudas? Escríbenos</span><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg></a>
+<div class="mbar" id="mbar">
+  <a href="#planes" class="btn btn-main"><span>Ver planes</span></a>
+  <a class="btn btn-wa wa" data-msg="general" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+</div>
+<div class="toast" id="toast"></div>
+<div class="loader" id="loader"><div><div class="sp"></div><b>Abriendo pago seguro…</b><p style="color:var(--ink3);font-size:.85rem">ePayco · SSL 256 bits</p></div></div>
+
+<!-- SVG icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.12-.27-.2-.57-.35zM12.04 21.5h-.01a9.43 9.43 0 0 1-4.8-1.32l-.35-.2-3.57.93.95-3.48-.22-.36a9.42 9.42 0 0 1-1.45-5.03c0-5.2 4.24-9.44 9.46-9.44 2.52 0 4.9.99 6.68 2.77a9.38 9.38 0 0 1 2.76 6.68c0 5.21-4.24 9.45-9.45 9.45zm8.04-17.5A11.3 11.3 0 0 0 12.04.67C5.77.67.67 5.77.67 12.04c0 2 .52 3.96 1.52 5.68L.57 23.33l5.74-1.5a11.33 11.33 0 0 0 5.73 1.46h.01c6.26 0 11.36-5.1 11.37-11.37 0-3.04-1.18-5.89-3.34-8.04z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M7 7l10 10M17 7L7 17" stroke-linecap="round"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20.5" r="1.3"/><circle cx="17" cy="20.5" r="1.3"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8z" stroke-linejoin="round"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke-linecap="round"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M2 6h11v10H2zM13 10h4l4 4v2h-8" stroke-linejoin="round"/><circle cx="6" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 10h19M6 15h4" stroke-linecap="round"/></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 9v.01M18 15v.01" stroke-linecap="round"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2" stroke-linecap="round"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></symbol>
+  <symbol id="i-wand" viewBox="0 0 24 24"><path d="M15 4V2M15 10V8M11 6h2M17 6h2M4 20L14 10" stroke-linecap="round"/><path d="M19 13l1 2 2 1-2 1-1 2-1-2-2-1 2-1z" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z" stroke-linejoin="round"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5M4 20h16" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<script>
+(function(){
+  /* ===== CONFIG ===== */
+  var WA = '573505457420';
+  var DOMINIO = 85000;
+  var EPAYCO = { key:'347e56166b7cbd26c7257d8689033fba', customer:'1595409', test:false };
+  var fmt = function(n){ return '$' + Math.round(n).toLocaleString('es-CO'); };
+
+  var MSG = {
+    general: 'Hola Bio Marketing 👋 Quiero información sobre la creación de mi tienda virtual / página web profesional. ¿Me pueden asesorar?',
+    'Emprende': 'Hola Bio Marketing 🚀 Me interesa el *Plan Emprende* ($198.000) para crear mi tienda virtual. Quiero empezar con el 50% de anticipo. ¿Qué datos necesitan?',
+    'Crece': 'Hola Bio Marketing 🔥 Me interesa el *Plan Crece* ($490.000) con pasarela de pagos para recibir tarjetas y PSE. ¿Cómo iniciamos?',
+    'Pro Empresarial': 'Hola Bio Marketing 👑 Me interesa el *Plan Pro Empresarial* ($890.000), tienda 100% a la medida y automatizada. Quiero agendar una asesoría.'
+  };
+  function waLink(text){ return 'https://wa.me/' + WA + '?text=' + encodeURIComponent(text); }
+  document.querySelectorAll('a.wa').forEach(function(a){
+    var key = a.getAttribute('data-msg') || 'general';
+    a.href = waLink(MSG[key] || MSG.general);
+    a.addEventListener('click', function(e){
+      var card = a.closest('.plan');
+      if(card && card.querySelector('.dom-chk').checked){
+        e.preventDefault();
+        window.open(waLink(MSG[key] + ' También quiero *dominio personalizado* ($85.000/año).'), '_blank', 'noopener');
+      }
+    });
+  });
+
+  /* ===== Image fallback ===== */
+  document.querySelectorAll('.ph img, .gal img').forEach(function(img){
+    function fail(){ var p = img.parentElement; p.classList.add('img-fb'); if(!p.dataset.emoji) p.dataset.emoji = '🛍️'; }
+    if(img.complete && img.naturalWidth === 0 && img.src) fail();
+    img.addEventListener('error', fail);
+  });
+
+  /* ===== Nav / sticky bars ===== */
+  var nav = document.getElementById('nav'), mbar = document.getElementById('mbar');
+  function onScroll(){
+    var y = window.scrollY;
+    nav.classList.toggle('scrolled', y > 20);
+    mbar.classList.toggle('show', y > 600);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  setTimeout(function(){ document.getElementById('bub').classList.add('show'); setTimeout(function(){ document.getElementById('bub').classList.remove('show'); }, 6000); }, 4000);
+
+  /* ===== Marquee duplicate ===== */
+  var tr = document.getElementById('track'); tr.innerHTML += tr.innerHTML;
+
+  /* ===== Reveal ===== */
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+    document.querySelectorAll('.rv').forEach(function(el, i){ el.style.transitionDelay = ((i % 3) * 80) + 'ms'; io.observe(el); });
+  } else { document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('in'); }); }
+
+  /* ===== Countdown to Sunday 23:59 ===== */
+  function endOfWeek(){ var d = new Date(); var add = (7 - d.getDay()) % 7; d.setDate(d.getDate() + add); d.setHours(23,59,59,999); return d; }
+  var cdEl = document.getElementById('cd'), tb = document.getElementById('tb-cd');
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function tick(){
+    var ms = Math.max(0, endOfWeek() - new Date());
+    var d = Math.floor(ms/864e5), h = Math.floor(ms/36e5)%24, m = Math.floor(ms/6e4)%60, s = Math.floor(ms/1e3)%60;
+    cdEl.innerHTML = '<span>'+d+'d</span><span>'+pad(h)+'h</span><span>'+pad(m)+'m</span><span>'+pad(s)+'s</span>';
+    tb.textContent = (d ? d + 'd ' : '') + pad(h) + ':' + pad(m) + ':' + pad(s);
+  }
+  tick(); setInterval(tick, 1000);
+
+  /* ===== Hero notification rotation ===== */
+  var notes = ['Tenis Runner · $189.900','Reloj Classic · $249.000','Audífonos Pro · $159.900','Gafas Sun · $89.900'], ni = 0, f1t = document.getElementById('f1t');
+  setInterval(function(){ ni = (ni + 1) % notes.length; f1t.textContent = notes[ni]; }, 3500);
+
+  /* ===== Savings calculator ===== */
+  var yrs = document.getElementById('yrs');
+  function calc(){
+    var y = +yrs.value, shop = (39 + 20) * 4000 * 12 * y, bio = 198000;
+    document.getElementById('yrs-l').textContent = y + (y > 1 ? ' años' : ' año');
+    document.getElementById('c-shop').textContent = fmt(shop);
+    document.getElementById('c-bio').textContent = fmt(bio);
+    document.getElementById('c-save').textContent = fmt(shop - bio);
+  }
+  yrs.addEventListener('input', calc); calc();
+
+  /* ===== Product load calculator ===== */
+  var np = document.getElementById('nprod');
+  function lc(){ var n = Math.max(0, parseInt(np.value, 10) || 0); document.getElementById('nprod-t').textContent = fmt(n * 5000); }
+  np.addEventListener('input', lc); lc();
+
+  /* ===== Plans: payment amount ===== */
+  function planState(card){
+    var price = +card.dataset.price, full = card.querySelector('.paymode .on').dataset.mode === 'full', dom = card.querySelector('.dom-chk').checked;
+    var amount = (full ? price : price / 2) + (dom ? DOMINIO : 0);
+    return { plan: card.dataset.plan, price: price, full: full, dom: dom, amount: amount };
+  }
+  function refresh(card){ card.querySelector('.pay-now').textContent = fmt(planState(card).amount); }
+  document.querySelectorAll('.plan').forEach(function(card){
+    card.querySelectorAll('.paymode button').forEach(function(b){
+      b.addEventListener('click', function(){ card.querySelectorAll('.paymode button').forEach(function(x){ x.classList.remove('on'); }); b.classList.add('on'); refresh(card); });
+    });
+    card.querySelector('.dom-chk').addEventListener('change', function(){ refresh(card); });
+    card.querySelector('.pay').addEventListener('click', function(){ pay(planState(card)); });
+    refresh(card);
+  });
+
+  /* ===== ePayco ===== */
+  var toastEl = document.getElementById('toast'), loader = document.getElementById('loader');
+  function toast(t){ toastEl.textContent = t; toastEl.classList.add('show'); setTimeout(function(){ toastEl.classList.remove('show'); }, 3800); }
+  function pay(s){
+    var desc = 'Tienda virtual Plan ' + s.plan + ' - ' + (s.full ? 'Pago total' : 'Anticipo 50%') + (s.dom ? ' + Dominio 1 año' : '');
+    var back = new URL('pago-ok.html', location.href).href;
+    loader.classList.add('show');
+    var tries = 0;
+    (function wait(){
+      if(window.ePayco && ePayco.checkout){
+        loader.classList.remove('show');
+        try{
+          var handler = ePayco.checkout.configure({ key: EPAYCO.key, test: EPAYCO.test, p_cust_id_cliente: EPAYCO.customer });
+          handler.open({
+            name: 'Bio Marketing', description: desc, invoice: 'BMT-' + Date.now(),
+            currency: 'cop', amount: String(s.amount), tax_base: '0', tax: '0',
+            country: 'co', lang: 'es', external: 'false',
+            extra1: s.plan, extra2: s.full ? 'total' : 'anticipo', extra3: s.dom ? 'dominio' : 'sin-dominio',
+            response: back, confirmation: back
+          });
+        }catch(e){ fallback(s); }
+        return;
+      }
+      if(++tries > 40){
+        var sc = document.createElement('script'); sc.src = 'https://checkout.epayco.co/checkout.js?v=' + Date.now();
+        sc.onload = function(){ tries = 0; wait(); }; sc.onerror = function(){ loader.classList.remove('show'); fallback(s); };
+        if(tries === 41) document.head.appendChild(sc);
+        return;
+      }
+      setTimeout(wait, 200);
+    })();
+  }
+  function fallback(s){
+    toast('No pudimos abrir el pago en línea. Te llevamos a WhatsApp para enviarte el link de pago.');
+    setTimeout(function(){ window.open(waLink('Hola Bio Marketing, quiero pagar el Plan ' + s.plan + ' (' + fmt(s.amount) + ') con tarjeta o PSE. ¿Me envían el link de pago?'), '_blank', 'noopener'); }, 1200);
+  }
+
+  /* ===== Domain typing ===== */
+  var doms = [['calzadohamsa','.com'],['biomarketing','.com'],['tutienda','.co'],['drogueriasanjose','.com.co']], di = 0, typed = document.getElementById('typed');
+  function typeDom(){
+    var d = doms[di], full = d[0] + d[1], i = 0;
+    (function step(){
+      i++;
+      var shown = full.slice(0, i), nm = shown.slice(0, d[0].length), ext = shown.slice(d[0].length);
+      typed.innerHTML = ''; typed.appendChild(document.createTextNode(nm));
+      if(ext){ var em = document.createElement('em'); em.textContent = ext; typed.appendChild(em); }
+      if(i < full.length) setTimeout(step, 85);
+      else setTimeout(function(){ di = (di + 1) % doms.length; typeDom(); }, 2200);
+    })();
+  }
+  typeDom();
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
