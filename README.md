@@ -66,3 +66,26 @@ de un marco cuadrado sin recortarse ni deformarse.
   en `index.html`, dentro de `.pricing-grid` (tres bloques `.plan`).
 - **Logos**: ver la sección "Subir un logo real" arriba — se reemplazan
   subiendo un archivo con el mismo nombre, sin tocar `index.html`.
+
+---
+
+## Landing: Tiendas virtuales (`/tiendas`)
+
+Landing de venta del servicio de creación de tiendas virtuales y páginas web.
+
+- **`tiendas/index.html`**: la landing (3 planes, comparativo vs Shopify, dominio, panel administrativo, preguntas frecuentes).
+- **`tiendas/pago-ok.html`**: página a la que ePayco devuelve al cliente después de pagar.
+- **`vercel.json`**: configuración para Vercel.
+
+### Publicar en Vercel
+1. En vercel.com → **Add New → Project** → importa `biocolombiaplus-max/biomarketing`.
+2. Framework preset: **Other**. Sin comando de build. **Deploy**.
+3. La landing queda en `https://TU-PROYECTO.vercel.app/tiendas/` (`/tienda` también redirige ahí).
+   - Si quieres que la landing sea la página principal, crea otro proyecto en Vercel con el mismo repositorio
+     y en **Root Directory** escribe `tiendas`.
+
+### Editar precios y pagos
+Todo está en `tiendas/index.html`:
+- Precio de cada plan: atributo `data-price` de cada `<article class="plan">` (y el texto visible del precio).
+- Bloque `CONFIG` del script: número de WhatsApp, valor del dominio (`DOMINIO`), credenciales de ePayco y mensajes de WhatsApp.
+- El botón de pago cobra el 50% del plan (o el total si el cliente lo elige) más el dominio si lo marcó.
